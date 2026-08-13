@@ -2,7 +2,7 @@
 {
   "name": "Urban Policy News",
   "schemaVersion": 1,
-  "description": "서울시 도시계획 고시·공고 실시간 현황 + 건축법·국토계획법 개정 모니터링. 정기 자동 갱신."
+  "description": "서울시·국토교통부·국토연구원·서울연구원의 도시정책 헤드라인 + 건축법·국토계획법 개정 모니터링. 정기 자동 갱신."
 }
 </script>
 <html lang="ko">
@@ -52,36 +52,6 @@ main {
 }
 .section-title { font-size: 15px; font-weight: 700; margin: 26px 0 10px; padding-left: 8px; border-left: 4px solid #7c3aed; }
 .section-sub { font-size: 12px; color: #8a93a6; margin: -6px 0 14px 12px; }
-.notice-list {
-  background: #fff;
-  border: 1px solid #e5e9f2;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.notice {
-  display: block;
-  padding: 14px 18px;
-  border-bottom: 1px solid #eef1f6;
-  text-decoration: none;
-  color: #1a1f36;
-}
-.notice:last-child { border-bottom: none; }
-.notice:hover { background: #faf8ff; }
-.notice-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
-.tag {
-  font-size: 10.5px;
-  font-weight: 700;
-  padding: 2px 8px;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-.tag-area { background: #ede9fe; color: #5b21b6; }
-.tag-gu { background: #e0f2f1; color: #00695c; }
-.headline2 { font-size: 14px; font-weight: 600; color: #1a1f36; }
-.headline2 b { color: #7c3aed; }
-.kr2 { display: block; margin-top: 4px; font-size: 12.5px; color: #6b7280; }
-.kr2 b { color: #374151; font-weight: 700; }
-.notice time { display: block; margin-top: 5px; font-size: 11px; color: #9aa2b1; }
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -118,6 +88,17 @@ main {
   display: block;
 }
 .card li a:hover .headline { color: #7c3aed; text-decoration: underline; }
+.tag-row { margin-bottom: 3px; }
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+.tag-gu { background: #e0f2f1; color: #00695c; }
+.tag-area { background: #ede9fe; color: #5b21b6; }
 .headline { display: block; }
 .headline b { color: #7c3aed; font-weight: 700; }
 .kr { display: block; margin-top: 4px; font-size: 11.5px; color: #6b7280; }
@@ -128,6 +109,10 @@ main {
   font-size: 11px;
   color: #9aa2b1;
 }
+.badge-seoul { background: #009688; color: #fff; }
+.badge-molit { background: #0b5ed7; color: #fff; }
+.badge-krihs { background: #6b4226; color: #fff; }
+.badge-si { background: #d81b60; color: #fff; }
 .badge-law1 { background: #b45309; color: #fff; }
 .badge-law2 { background: #1e3a8a; color: #fff; }
 .badge {
@@ -152,7 +137,7 @@ footer b { color: #5b6478; }
 
 <header>
   <h1>🏙 Urban Policy News — 서울시 도시정책 팔로우업</h1>
-  <p>서울시·자치구 도시계획 고시·공고를 쉬운 말로 바로 볼 수 있게 정리하고, 건축법·국토계획법 개정 동향도 함께 모니터링합니다</p>
+  <p>서울시·국토교통부·국토연구원·서울연구원의 도시정책 헤드라인을 쉬운 말로 바로 볼 수 있게 정리하고, 건축법·국토계획법 개정 동향도 함께 모니터링합니다</p>
 </header>
 
 <div class="nav-bar">
@@ -161,71 +146,115 @@ footer b { color: #5b6478; }
 </div>
 
 <div class="updated-bar">
-  <span>마지막 업데이트: <b id="updated-time">2026-08-13 13:10 (KST)</b></span>
+  <span>마지막 업데이트: <b id="updated-time">2026-08-13 13:45 (KST)</b></span>
   <span>다음 자동 갱신: 매주 목요일 오전 7시</span>
 </div>
 
 <main>
 
-  <h2 class="section-title">🏙 서울시 도시계획 실시간 현황</h2>
-  <p class="section-sub">서울시·자치구 주간 열람공고·결정고시(서울시 뉴스룸) 중 주요 사업만 골라 쉬운 말로 요약 — 원문은 클릭해서 확인</p>
-  <div class="notice-list">
+  <h2 class="section-title">🇰🇷 국내 도시정책 · 연구기관</h2>
+  <p class="section-sub">서울시 고시·공고는 쉬운 말로 바로 요약 — 원문은 클릭해서 확인</p>
+  <div class="grid">
 
-    <a class="notice" href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-      <div class="notice-top"><span class="tag tag-gu">영등포구</span><span class="tag tag-area">관리처분인가</span></div>
-      <span class="headline2"><b>여의도 한양아파트</b> 재건축정비사업 관리처분계획 인가 고시</span>
-      <span class="kr2">여의도 <b>한양아파트</b> 재건축 — 관리처분계획 인가로 <b>이주·철거 단계</b> 진입</span>
-      <time>8월 1주 · 영등포구 고시 제2026-125호</time>
-    </a>
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-seoul">서울시</span> 서울시 도시계획 현황</h2>
+        <span>고시·공고</span>
+      </div>
+      <ul>
+        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+          <span class="tag-row"><span class="tag tag-gu">영등포구</span><span class="tag tag-area">관리처분인가</span></span>
+          <span class="headline"><b>여의도 한양아파트</b> 재건축정비사업 관리처분계획 인가 고시</span>
+          <span class="kr">여의도 <b>한양아파트</b> 재건축 — 관리처분계획 인가로 <b>이주·철거 단계</b> 진입</span>
+          <time>8월 1주 · 영등포구 고시 제2026-125호</time></a></li>
+        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+          <span class="tag-row"><span class="tag tag-gu">용산구</span><span class="tag tag-area">지구단위계획</span></span>
+          <span class="headline"><b>한남 지구단위계획</b> 결정(변경) 및 특별계획구역④-1 세부개발계획(안) 열람공고</span>
+          <span class="kr"><b>한남뉴타운</b> 일대 지구단위계획 변경안 열람공고 — 특별계획구역 세부개발계획 포함</span>
+          <time>8월 1주 · 용산구 공고 제2026-1078호</time></a></li>
+        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+          <span class="tag-row"><span class="tag tag-gu">중구</span><span class="tag tag-area">사업시행인가</span></span>
+          <span class="headline"><b>세운재정비촉진지구</b> 6-4-22·6-4-23구역 사업시행계획(변경)인가 공람·공고</span>
+          <span class="kr"><b>세운상가 일대</b> 재개발구역 2곳, 사업시행자·설계 변경안 주민 공람 중</span>
+          <time>8월 1주 · 중구 공고 제2026-832·833호</time></a></li>
+        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+          <span class="tag-row"><span class="tag tag-gu">양천구</span><span class="tag tag-area">기반시설</span></span>
+          <span class="headline"><b>목동12단지아파트</b> 재건축 관련 도시계획시설(소공원) 조성계획(안) 열람공고</span>
+          <span class="kr"><b>목동12단지</b> 재건축에 맞춰 단지 내 소공원 신설 계획 열람공고</span>
+          <time>8월 1주 · 양천구 공고 제2026-1370호</time></a></li>
+        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+          <span class="tag-row"><span class="tag tag-gu">성동구</span><span class="tag tag-area">지구단위계획</span></span>
+          <span class="headline"><b>왕십리 광역중심</b> 지구단위계획 및 역세권활성화사업 특별계획구역 세부개발계획(변경)(안)</span>
+          <span class="kr"><b>왕십리</b> 광역중심 지구단위계획 변경안 — 역세권 활성화사업 세부계획 포함 열람공고</span>
+          <time>8월 1주 · 성동구 공고 제2026-1089호</time></a></li>
+        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+          <span class="tag-row"><span class="tag tag-gu">강남구</span><span class="tag tag-area">관리처분인가</span></span>
+          <span class="headline"><b>개포동주공아파트</b> 주택재건축정비사업 관리처분계획 변경인가 고시</span>
+          <span class="kr"><b>개포주공</b> 재건축 관리처분계획 일부 변경 인가 — 기존 사업 조건 수정</span>
+          <time>8월 1주 · 강남구 고시 제2026-150호</time></a></li>
+        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+          <span class="tag-row"><span class="tag tag-gu">서울시 전역</span><span class="tag tag-area">지구단위계획 대규모 정비</span></span>
+          <span class="headline">도시관리계획(<b>상봉생활권중심 지구단위계획구역 등 156개 구역</b>) 결정(변경)(안) 열람공고</span>
+          <span class="kr">서울시 전역 <b>지구단위계획 156개 구역</b> 일괄 정비(안) 열람공고 — 대규모 제도 정비</span>
+          <time>8월 1주 · 서울특별시 공고 제2026-2272호</time></a></li>
+        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+          <span class="tag-row"><span class="tag tag-gu">서울시 전역</span><span class="tag tag-area">토지거래허가구역</span></span>
+          <span class="headline"><b>토지거래허가구역</b> (재)지정, 조정, 해제 공고</span>
+          <span class="kr"><b>토지거래허가구역</b> 지정·조정·해제 — 부동산 거래규제 지역 변동, 시장 영향 즉각적</span>
+          <time>8월 1주 · 서울특별시 공고 제2026-2289호</time></a></li>
+      </ul>
+    </div>
 
-    <a class="notice" href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-      <div class="notice-top"><span class="tag tag-gu">용산구</span><span class="tag tag-area">지구단위계획</span></div>
-      <span class="headline2"><b>한남 지구단위계획</b> 결정(변경) 및 특별계획구역④-1 세부개발계획(안) 열람공고</span>
-      <span class="kr2"><b>한남뉴타운</b> 일대 지구단위계획 변경안 열람공고 — 특별계획구역 세부개발계획 포함</span>
-      <time>8월 1주 · 용산구 공고 제2026-1078호</time>
-    </a>
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-molit">MOLIT</span> 국토교통부</h2>
+        <span>보도자료</span>
+      </div>
+      <ul>
+        <li><a href="http://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?lcmspage=1&id=95086860" target="_blank" rel="noopener">
+          <span class="headline">제1회 <b>국토부-지자체 도시정책협의회</b> 개최</span>
+          <span class="kr">국토부-지자체 <b>도시정책협의회</b> 첫 회의 — 현장 목소리 기반 제도개선 과제 발굴</span>
+          <time>8월</time></a></li>
+        <li><a href="https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_2" target="_blank" rel="noopener">
+          <span class="headline">전국 <b>도시재생</b> 현장의 목소리를 듣는다</span>
+          <span class="kr">전국 <b>도시재생</b> 현장 방문 — 정례 도시정책협의회로 소통 강화</span>
+          <time>8월 11일</time></a></li>
+      </ul>
+    </div>
 
-    <a class="notice" href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-      <div class="notice-top"><span class="tag tag-gu">중구</span><span class="tag tag-area">사업시행인가</span></div>
-      <span class="headline2"><b>세운재정비촉진지구</b> 6-4-22·6-4-23구역 도시정비형 재개발 사업시행계획(변경)인가 공람·공고</span>
-      <span class="kr2"><b>세운상가 일대</b> 재개발구역 2곳, 사업시행자·설계 변경안 주민 공람 중</span>
-      <time>8월 1주 · 중구 공고 제2026-832·833호</time>
-    </a>
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-krihs">KRIHS</span> 국토연구원</h2>
+        <span>국토정책Brief</span>
+      </div>
+      <ul>
+        <li><a href="https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1" target="_blank" rel="noopener">
+          <span class="headline">국토정책Brief 제1074호: <b>도로 산업 육성</b>을 위한 정책적 지원방안</span>
+          <span class="kr">국토정책Brief 1074호: <b>도로산업 육성</b> 정책지원 방안 — R&D 투자·자율주행 대응</span>
+          <time>8월 3일</time></a></li>
+        <li><a href="https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1" target="_blank" rel="noopener">
+          <span class="headline">국토정책Brief 제1073호: <b>인구감소지역</b> AI 기반 정밀진단과 정책 추진방안</span>
+          <span class="kr">국토정책Brief 1073호: <b>인구소멸 격차</b> 해소 위한 AI 기반 진단·정책 방안</span>
+          <time>7월 27일</time></a></li>
+      </ul>
+    </div>
 
-    <a class="notice" href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-      <div class="notice-top"><span class="tag tag-gu">양천구</span><span class="tag tag-area">기반시설</span></div>
-      <span class="headline2"><b>목동12단지아파트</b> 재건축 관련 도시계획시설(소공원) 조성계획(안) 열람공고</span>
-      <span class="kr2"><b>목동12단지</b> 재건축에 맞춰 단지 내 소공원 신설 계획 열람공고</span>
-      <time>8월 1주 · 양천구 공고 제2026-1370호</time>
-    </a>
-
-    <a class="notice" href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-      <div class="notice-top"><span class="tag tag-gu">성동구</span><span class="tag tag-area">지구단위계획</span></div>
-      <span class="headline2"><b>왕십리 광역중심</b> 지구단위계획 및 역세권활성화사업 특별계획구역 세부개발계획(변경)(안) 열람공고</span>
-      <span class="kr2"><b>왕십리</b> 광역중심 지구단위계획 변경안 — 역세권 활성화사업 세부계획 포함 열람공고</span>
-      <time>8월 1주 · 성동구 공고 제2026-1089호</time>
-    </a>
-
-    <a class="notice" href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-      <div class="notice-top"><span class="tag tag-gu">강남구</span><span class="tag tag-area">관리처분인가</span></div>
-      <span class="headline2"><b>개포동주공아파트</b> 주택재건축정비사업 관리처분계획 변경인가 고시</span>
-      <span class="kr2"><b>개포주공</b> 재건축 관리처분계획 일부 변경 인가 — 기존 사업 진행 중 조건 수정</span>
-      <time>8월 1주 · 강남구 고시 제2026-150호</time>
-    </a>
-
-    <a class="notice" href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-      <div class="notice-top"><span class="tag tag-gu">서울시 전역</span><span class="tag tag-area">지구단위계획 대규모 정비</span></div>
-      <span class="headline2">도시관리계획(<b>상봉생활권중심 지구단위계획구역 등 156개 구역</b>) 결정(변경)(안) 열람공고</span>
-      <span class="kr2">서울시 전역 <b>지구단위계획 156개 구역</b> 일괄 정비(안) 열람공고 — 대규모 제도 정비</span>
-      <time>8월 1주 · 서울특별시 공고 제2026-2272호</time>
-    </a>
-
-    <a class="notice" href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-      <div class="notice-top"><span class="tag tag-gu">서울시 전역</span><span class="tag tag-area">토지거래허가구역</span></div>
-      <span class="headline2"><b>토지거래허가구역</b> (재)지정, 조정, 해제 공고</span>
-      <span class="kr2"><b>토지거래허가구역</b> 지정·조정·해제 — 부동산 거래규제 지역 변동, 시장 영향 즉각적</span>
-      <time>8월 1주 · 서울특별시 공고 제2026-2289호</time>
-    </a>
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-si">SI</span> 서울연구원</h2>
+        <span>정책리포트</span>
+      </div>
+      <ul>
+        <li><a href="https://www.si.re.kr/atch/filePreview.do?cnncSn=2606020005&cnncTy=bbs&ordr=1" target="_blank" rel="noopener">
+          <span class="headline">세계도시 정책동향 제600호: <b>노인 주거 정책</b></span>
+          <span class="kr">서울연구원 세계도시 정책동향 — 해외 <b>고령자 주거정책</b> 사례 분석</span>
+          <time>5월 26일</time></a></li>
+        <li><a href="https://www.si.re.kr/atch/filePreview.do?cnncSn=2602090007&cnncTy=bbs&ordr=2" target="_blank" rel="noopener">
+          <span class="headline">정책리포트 제438호: 서울시 <b>초고령화 대응</b> 계속고용제도와 중장년 고용정책</span>
+          <span class="kr">서울시 <b>초고령화 대응</b> — 계속고용제도·중장년 고용정책 발전방향 제언</span>
+          <time>1월 26일</time></a></li>
+      </ul>
+    </div>
 
   </div>
 
@@ -271,7 +300,7 @@ footer b { color: #5b6478; }
 </main>
 
 <footer>
-  <p><b>안내:</b> 서울시 항목은 서울시 뉴스룸(news.seoul.go.kr/citybuild)의 주간 "도시계획 관련 주요 열람공고 및 결정고시" 게시물 중 주요 사업을 골라 쉬운 말로 요약한 것입니다. 정확한 고시·공고 원문 및 첨부서류는 링크된 서울시 뉴스룸 게시물에서 확인하세요. 건축법·국토계획법 항목은 국가법령정보센터(law.go.kr) 기준입니다.</p>
+  <p><b>안내:</b> 서울시 항목은 서울시 뉴스룸(news.seoul.go.kr/citybuild)의 주간 "도시계획 관련 주요 열람공고 및 결정고시" 게시물 중 주요 사업을 골라 쉬운 말로 요약한 것입니다. 정확한 고시·공고 원문 및 첨부서류는 링크된 서울시 뉴스룸 게시물에서 확인하세요. 국토교통부·국토연구원·서울연구원·건축법·국토계획법 항목은 각 기관 공식 발간물 및 국가법령정보센터(law.go.kr) 기준입니다.</p>
   <p>매주 목요일 오전 7시 자동 갱신됩니다.</p>
 </footer>
 
