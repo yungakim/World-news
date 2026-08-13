@@ -1,0 +1,281 @@
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Urban Policy News",
+  "schemaVersion": 1,
+  "description": "국내(국토교통부·서울시·국토연구원·Korea Herald)와 해외(Bloomberg CityLab·Al Jazeera·SCMP) 도시정책 관련 뉴스·기사 헤드라인. 매일 자동 갱신."
+}
+</script>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Urban Policy News</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+  background: #f4f6fa;
+  color: #1a1f36;
+}
+header {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: #fff;
+  padding: 22px 28px;
+}
+header h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+header p { margin: 6px 0 0; font-size: 13px; opacity: 0.9; }
+.nav-bar {
+  background: #1e1b2e;
+  padding: 8px 28px;
+  font-size: 12.5px;
+}
+.nav-bar a { color: #d9c9ff; text-decoration: none; margin-right: 16px; }
+.nav-bar a:hover { text-decoration: underline; }
+.nav-bar a.active { color: #fff; font-weight: 700; }
+.updated-bar {
+  background: #fff;
+  border-bottom: 1px solid #e5e9f2;
+  padding: 10px 28px;
+  font-size: 12.5px;
+  color: #5b6478;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.updated-bar b { color: #7c3aed; }
+main {
+  padding: 22px 28px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.section-title { font-size: 15px; font-weight: 700; margin: 26px 0 10px; padding-left: 8px; border-left: 4px solid #7c3aed; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card-head {
+  padding: 14px 16px;
+  border-bottom: 2px solid #7c3aed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-head h2 { margin: 0; font-size: 16px; font-weight: 700; }
+.card-head span { font-size: 11.5px; color: #8a93a6; }
+.card ul { list-style: none; margin: 0; padding: 0; }
+.card li {
+  padding: 11px 16px;
+  border-bottom: 1px solid #eef1f6;
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+.card li:last-child { border-bottom: none; }
+.card li a {
+  color: #1a1f36;
+  text-decoration: none;
+  display: block;
+}
+.card li a:hover .headline { color: #7c3aed; text-decoration: underline; }
+.headline { display: block; }
+.headline b { color: #7c3aed; font-weight: 700; }
+.kr { display: block; margin-top: 4px; font-size: 11.5px; color: #6b7280; }
+.kr b { color: #374151; font-weight: 700; }
+.card li time {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #9aa2b1;
+}
+.badge-molit { background: #0b5ed7; color: #fff; }
+.badge-seoul { background: #009688; color: #fff; }
+.badge-krihs { background: #6b4226; color: #fff; }
+.badge-kh { background: #b3212e; color: #fff; }
+.badge-citylab { background: #000; color: #fff; }
+.badge-aj { background: #fa9e1b; color: #1a1f36; }
+.badge-scmp { background: #002f6c; color: #fff; }
+.badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+footer {
+  max-width: 1300px;
+  margin: 8px auto 30px;
+  padding: 16px 28px 0;
+  font-size: 12px;
+  color: #8a93a6;
+  border-top: 1px solid #e5e9f2;
+}
+footer p { margin: 8px 0; }
+footer b { color: #5b6478; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏙 Urban Policy News — 국내외 도시정책 뉴스</h1>
+  <p>국토교통부·서울시·국토연구원·Korea Herald 등 국내 소스, Bloomberg CityLab·Al Jazeera·SCMP 등 해외 소스의 도시정책 관련 최신 뉴스·기사를 모아봅니다</p>
+</header>
+
+<div class="nav-bar">
+  <a href="./index.html">🌍 World News Headlines</a>
+  <a href="./urban.html" class="active">🏙 Urban Policy News</a>
+</div>
+
+<div class="updated-bar">
+  <span>마지막 업데이트: <b id="updated-time">2026-08-13 12:05 (KST)</b></span>
+  <span>다음 자동 갱신: 매일 오전 7시 / 오후 7시</span>
+</div>
+
+<main>
+
+  <h2 class="section-title">🇰🇷 국내 도시정책 · 뉴스</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-molit">MOLIT</span> 국토교통부</h2>
+        <span>보도자료</span>
+      </div>
+      <ul>
+        <li><a href="http://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?lcmspage=1&id=95086860" target="_blank" rel="noopener">
+          <span class="headline">제1회 <b>국토부-지자체 도시정책협의회</b> 개최</span>
+          <span class="kr">국토부-지자체 <b>도시정책협의회</b> 첫 회의 — 현장 목소리 기반 제도개선 과제 발굴</span>
+          <time>8월</time></a></li>
+        <li><a href="https://www.molit.go.kr/USR/NEWS/m_71/lst.jsp?search_section=p_sec_2" target="_blank" rel="noopener">
+          <span class="headline">전국 <b>도시재생</b> 현장의 목소리를 듣는다</span>
+          <span class="kr">전국 <b>도시재생</b> 현장 방문 — 정례 도시정책협의회로 소통 강화</span>
+          <time>8월 11일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-seoul">서울시</span> 서울시 뉴스룸</h2>
+        <span>도시계획 고시</span>
+      </div>
+      <ul>
+        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+          <span class="headline">서울시·자치구 <b>도시계획</b> 주요 열람공고 및 결정고시 (8월 1주)</span>
+          <span class="kr">서울시·자치구 <b>도시계획 결정고시</b> — 8월 1주차 정비·재건축 계획 정리</span>
+          <time>8월 1주</time></a></li>
+        <li><a href="https://news.seoul.go.kr/citybuild/archives/541520" target="_blank" rel="noopener">
+          <span class="headline">서울시·자치구 <b>도시계획</b> 주요 열람공고 및 결정고시 (7월 5주)</span>
+          <span class="kr">서울시·자치구 <b>도시계획 결정고시</b> — 7월 5주차 정비·재건축 계획 정리</span>
+          <time>7월 5주</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-krihs">KRIHS</span> 국토연구원</h2>
+        <span>국토정책Brief</span>
+      </div>
+      <ul>
+        <li><a href="https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1" target="_blank" rel="noopener">
+          <span class="headline">국토정책Brief 제1074호: <b>도로 산업 육성</b>을 위한 정책적 지원방안</span>
+          <span class="kr">국토정책Brief 1074호: <b>도로산업 육성</b> 정책지원 방안 — R&D 투자·자율주행 대응</span>
+          <time>8월 3일</time></a></li>
+        <li><a href="https://www.krihs.re.kr/krihsLibraryReport/briefList.es?mid=a10103050000&pub_kind=BR_1" target="_blank" rel="noopener">
+          <span class="headline">국토정책Brief 제1073호: <b>인구감소지역</b> AI 기반 정밀진단과 정책 추진방안</span>
+          <span class="kr">국토정책Brief 1073호: <b>인구소멸 격차</b> 해소 위한 AI 기반 진단·정책 방안</span>
+          <time>7월 27일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-kh">KH</span> Korea Herald</h2>
+        <span>부동산·주택정책</span>
+      </div>
+      <ul>
+        <li><a href="https://www.koreaherald.com/article/10837924" target="_blank" rel="noopener">
+          <span class="headline">Land Minister vows to speed up <b>new town</b> projects in Greater Seoul</span>
+          <span class="kr">국토부 장관, 수도권 <b>신도시</b> 사업 속도전 예고</span>
+          <time>8월</time></a></li>
+        <li><a href="https://www.koreaherald.com/article/10835111" target="_blank" rel="noopener">
+          <span class="headline">Friction brews over <b>Yongsan Park</b>'s future as government moves to increase housing</span>
+          <span class="kr">주택공급 확대 방침 속 <b>용산공원</b> 활용을 둘러싼 갈등 고조</span>
+          <time>8월</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">🌍 해외 도시정책 · 뉴스</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-citylab">CTLB</span> Bloomberg CityLab</h2>
+        <span>Urban Affairs</span>
+      </div>
+      <ul>
+        <li><a href="https://www.bloomberg.com/news/newsletters/2026-04-28/what-we-learned-from-citylab-2026-in-madrid-citylab-weekly" target="_blank" rel="noopener">
+          <span class="headline">What We Learned from <b>CityLab 2026</b> in Madrid</span>
+          <span class="kr"><b>시티랩 2026</b> 마드리드 콘퍼런스 결산 — 런던·볼티모어 등 시장들이 나눈 도시정책 인사이트</span>
+          <time>4월 28일</time></a></li>
+        <li><a href="https://www.bloomberg.com/news/newsletters/2026-02-11/a-call-to-rethink-slums-in-new-book-the-homegrown-cities-citylab-daily" target="_blank" rel="noopener">
+          <span class="headline">A Call to Rethink <b>Slums</b> in New Book 'The Homegrown Cities'</span>
+          <span class="kr">신간 'The Homegrown Cities' — <b>빈민가</b>를 바라보는 시각의 전환 촉구</span>
+          <time>2월 11일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-aj">AJ</span> Al Jazeera</h2>
+        <span>Cities & Planning</span>
+      </div>
+      <ul>
+        <li><a href="https://www.aljazeera.com/economy/2026/7/24/andy-burnhams-number-10-north-changes-the-postcode-but-not-the-politics" target="_blank" rel="noopener">
+          <span class="headline">Andy Burnham's "<b>Number 10 North</b>" changes the postcode, but not the politics</span>
+          <span class="kr">영국 <b>지방분권법</b> 확대로 맨체스터 시장 권한 강화 — 교통·주택·계획권 이양</span>
+          <time>7월 24일</time></a></li>
+        <li><a href="https://www.aljazeera.com/video/talk-to-al-jazeera/2026/7/19/designing-cities-for-a-hotter-future" target="_blank" rel="noopener">
+          <span class="headline">Designing <b>cities</b> for a hotter future</span>
+          <span class="kr">더워지는 지구, <b>도시 설계</b>는 어떻게 바뀌어야 하나</span>
+          <time>7월 19일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-scmp">SCMP</span> South China Morning Post</h2>
+        <span>Asia Cities</span>
+      </div>
+      <ul>
+        <li><a href="https://www.scmp.com/business/china-business/article/3355357/chinas-us22-trillion-urban-renewal-plan-boost-construction-property-sectors" target="_blank" rel="noopener">
+          <span class="headline">China's <b>US$2.2 trillion urban renewal</b> plan to boost construction, property sectors</span>
+          <span class="kr">중국, 5개년 <b>2조2000억 달러 규모 도시재생</b> 계획으로 건설·부동산 부양</span>
+          <time>2026</time></a></li>
+        <li><a href="https://www.scmp.com/economy/china-economy/article/3318305/chinas-dated-urban-development-model-must-change-beijing-says-rare-meeting" target="_blank" rel="noopener">
+          <span class="headline">China's dated <b>urban-development model</b> must change, Beijing says at rare meeting</span>
+          <span class="kr">베이징 "낡은 <b>도시개발 모델</b> 전환 필요" — 이례적 고위급 회의서 강조</span>
+          <time>2026</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <p><b>안내:</b> 이 페이지는 국토교통부·서울시·국토연구원·Korea Herald(국내)와 Bloomberg CityLab·Al Jazeera·South China Morning Post(해외)가 공개한 도시정책 관련 뉴스·기사 헤드라인을 자동 수집·번역하여 제공합니다. 원문 확인은 각 링크를 참고하세요.</p>
+  <p>매일 오전 7시 / 오후 7시 자동 갱신됩니다.</p>
+</footer>
+
+</body>
+</html>

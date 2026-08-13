@@ -120,6 +120,14 @@ footer {
 }
 footer p { margin: 8px 0; }
 footer b { color: #5b6478; }
+.nav-bar {
+  background: #0b1220;
+  padding: 8px 28px;
+  font-size: 12.5px;
+}
+.nav-bar a { color: #bcd2ff; text-decoration: none; margin-right: 16px; }
+.nav-bar a:hover { text-decoration: underline; }
+.nav-bar a.active { color: #fff; font-weight: 700; }
 </style>
 </head>
 <body>
@@ -128,6 +136,11 @@ footer b { color: #5b6478; }
   <h1>🌍 World NewsLens — 해외 매체 헤드라인</h1>
   <p>일반 뉴스 · 경제/마켓 · 국제기구 리포트를 한 곳에 모아봅니다</p>
 </header>
+
+<div class="nav-bar">
+  <a href="./index.html" class="active">🌍 World News Headlines</a>
+  <a href="./urban.html">🏙 Urban Policy News</a>
+</div>
 
 <div class="updated-bar">
   <span>마지막 업데이트: <b id="updated-time">2026-08-13 11:13 (KST)</b></span>
