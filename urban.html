@@ -76,10 +76,10 @@ main {
 .card-head span { font-size: 11.5px; color: #8a93a6; }
 .card ul { list-style: none; margin: 0; padding: 0; }
 .card li {
-  padding: 11px 16px;
+  padding: 8px 16px;
   border-bottom: 1px solid #eef1f6;
-  font-size: 13.5px;
-  line-height: 1.4;
+  font-size: 13px;
+  line-height: 1.35;
 }
 .card li:last-child { border-bottom: none; }
 .card li a {
@@ -88,27 +88,51 @@ main {
   display: block;
 }
 .card li a:hover .headline { color: #7c3aed; text-decoration: underline; }
-.tag-row { margin-bottom: 3px; }
+.tag-row { margin-bottom: 2px; }
 .tag {
   display: inline-block;
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 700;
-  padding: 1px 6px;
+  padding: 1px 5px;
   border-radius: 4px;
-  margin-right: 4px;
+  margin-right: 3px;
 }
 .tag-gu { background: #e0f2f1; color: #00695c; }
 .tag-area { background: #ede9fe; color: #5b21b6; }
 .headline { display: block; }
 .headline b { color: #7c3aed; font-weight: 700; }
-.kr { display: block; margin-top: 4px; font-size: 11.5px; color: #6b7280; }
+.kr {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #6b7280;
+}
 .kr b { color: #374151; font-weight: 700; }
 .card li time {
   display: block;
-  margin-top: 4px;
-  font-size: 11px;
+  margin-top: 2px;
+  font-size: 10.5px;
   color: #9aa2b1;
 }
+.card details > ul { list-style: none; margin: 0; padding: 0; }
+.card details summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7c3aed;
+  border-top: 1px solid #eef1f6;
+  user-select: none;
+}
+.card details summary::-webkit-details-marker { display: none; }
+.card details summary:hover { background: #faf8ff; }
+.card details[open] .more-closed-label { display: none; }
+.card details:not([open]) .more-open-label { display: none; }
 .badge-seoul { background: #009688; color: #fff; }
 .badge-molit { background: #0b5ed7; color: #fff; }
 .badge-krihs { background: #6b4226; color: #fff; }
@@ -146,7 +170,7 @@ footer b { color: #5b6478; }
 </div>
 
 <div class="updated-bar">
-  <span>마지막 업데이트: <b id="updated-time">2026-08-13 14:47 (KST)</b></span>
+  <span>마지막 업데이트: <b id="updated-time">2026-08-13 14:50 (KST)</b></span>
   <span>다음 자동 갱신: 매주 목요일 오전 7시</span>
 </div>
 
@@ -182,27 +206,32 @@ footer b { color: #5b6478; }
           <span class="headline"><b>목동12단지아파트</b> 재건축 관련 도시계획시설(소공원) 조성계획(안) 열람공고</span>
           <span class="kr"><b>목동12단지</b> 재건축에 맞춰 단지 내 소공원 신설 계획 열람공고</span>
           <time>8월 1주 · 양천구 공고 제2026-1370호</time></a></li>
-        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-          <span class="tag-row"><span class="tag tag-gu">성동구</span><span class="tag tag-area">지구단위계획</span></span>
-          <span class="headline"><b>왕십리 광역중심</b> 지구단위계획 및 역세권활성화사업 특별계획구역 세부개발계획(변경)(안)</span>
-          <span class="kr"><b>왕십리</b> 광역중심 지구단위계획 변경안 — 역세권 활성화사업 세부계획 포함 열람공고</span>
-          <time>8월 1주 · 성동구 공고 제2026-1089호</time></a></li>
-        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-          <span class="tag-row"><span class="tag tag-gu">강남구</span><span class="tag tag-area">관리처분인가</span></span>
-          <span class="headline"><b>개포동주공아파트</b> 주택재건축정비사업 관리처분계획 변경인가 고시</span>
-          <span class="kr"><b>개포주공</b> 재건축 관리처분계획 일부 변경 인가 — 기존 사업 조건 수정</span>
-          <time>8월 1주 · 강남구 고시 제2026-150호</time></a></li>
-        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-          <span class="tag-row"><span class="tag tag-gu">서울시 전역</span><span class="tag tag-area">지구단위계획 대규모 정비</span></span>
-          <span class="headline">도시관리계획(<b>상봉생활권중심 지구단위계획구역 등 156개 구역</b>) 결정(변경)(안) 열람공고</span>
-          <span class="kr">서울시 전역 <b>지구단위계획 156개 구역</b> 일괄 정비(안) 열람공고 — 대규모 제도 정비</span>
-          <time>8월 1주 · 서울특별시 공고 제2026-2272호</time></a></li>
-        <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
-          <span class="tag-row"><span class="tag tag-gu">서울시 전역</span><span class="tag tag-area">토지거래허가구역</span></span>
-          <span class="headline"><b>토지거래허가구역</b> (재)지정, 조정, 해제 공고</span>
-          <span class="kr"><b>토지거래허가구역</b> 지정·조정·해제 — 부동산 거래규제 지역 변동, 시장 영향 즉각적</span>
-          <time>8월 1주 · 서울특별시 공고 제2026-2289호</time></a></li>
       </ul>
+      <details>
+        <summary><span class="more-closed-label">더보기 (4개 더) ▾</span><span class="more-open-label">접기 ▴</span></summary>
+        <ul>
+          <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+            <span class="tag-row"><span class="tag tag-gu">성동구</span><span class="tag tag-area">지구단위계획</span></span>
+            <span class="headline"><b>왕십리 광역중심</b> 지구단위계획 및 역세권활성화사업 특별계획구역 세부개발계획(변경)(안)</span>
+            <span class="kr"><b>왕십리</b> 광역중심 지구단위계획 변경안 — 역세권 활성화사업 세부계획 포함 열람공고</span>
+            <time>8월 1주 · 성동구 공고 제2026-1089호</time></a></li>
+          <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+            <span class="tag-row"><span class="tag tag-gu">강남구</span><span class="tag tag-area">관리처분인가</span></span>
+            <span class="headline"><b>개포동주공아파트</b> 주택재건축정비사업 관리처분계획 변경인가 고시</span>
+            <span class="kr"><b>개포주공</b> 재건축 관리처분계획 일부 변경 인가 — 기존 사업 조건 수정</span>
+            <time>8월 1주 · 강남구 고시 제2026-150호</time></a></li>
+          <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+            <span class="tag-row"><span class="tag tag-gu">서울시 전역</span><span class="tag tag-area">지구단위계획 대규모 정비</span></span>
+            <span class="headline">도시관리계획(<b>상봉생활권중심 지구단위계획구역 등 156개 구역</b>) 결정(변경)(안) 열람공고</span>
+            <span class="kr">서울시 전역 <b>지구단위계획 156개 구역</b> 일괄 정비(안) 열람공고 — 대규모 제도 정비</span>
+            <time>8월 1주 · 서울특별시 공고 제2026-2272호</time></a></li>
+          <li><a href="https://news.seoul.go.kr/citybuild/archives/541619" target="_blank" rel="noopener">
+            <span class="tag-row"><span class="tag tag-gu">서울시 전역</span><span class="tag tag-area">토지거래허가구역</span></span>
+            <span class="headline"><b>토지거래허가구역</b> (재)지정, 조정, 해제 공고</span>
+            <span class="kr"><b>토지거래허가구역</b> 지정·조정·해제 — 부동산 거래규제 지역 변동, 시장 영향 즉각적</span>
+            <time>8월 1주 · 서울특별시 공고 제2026-2289호</time></a></li>
+        </ul>
+      </details>
     </div>
 
     <div class="card">
