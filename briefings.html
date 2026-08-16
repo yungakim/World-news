@@ -50,11 +50,15 @@ main {
   max-width: 1300px;
   margin: 0 auto;
 }
-.section-title { font-size: 15px; font-weight: 700; margin: 26px 0 10px; padding-left: 8px; border-left: 4px solid #0d9488; }
+.section-title { font-size: 17px; font-weight: 800; margin: 30px 0 12px; padding-left: 8px; border-left: 4px solid #0d9488; }
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+}
+@media (max-width: 760px) {
+  .grid { grid-template-columns: 1fr; }
+  main { padding: 16px 16px 32px; }
 }
 .card {
   background: #fff;
@@ -71,14 +75,14 @@ main {
   align-items: center;
   justify-content: space-between;
 }
-.card-head h2 { margin: 0; font-size: 16px; font-weight: 700; }
-.card-head span { font-size: 11.5px; color: #8a93a6; }
+.card-head h2 { margin: 0; font-size: 17px; font-weight: 800; }
+.card-head span { font-size: 12px; color: #8a93a6; }
 .card ul { list-style: none; margin: 0; padding: 0; }
 .card li {
-  padding: 11px 16px;
+  padding: 14px 18px;
   border-bottom: 1px solid #eef1f6;
-  font-size: 13.5px;
-  line-height: 1.4;
+  font-size: 15.5px;
+  line-height: 1.48;
 }
 .card li:last-child { border-bottom: none; }
 .card li a {
@@ -87,21 +91,27 @@ main {
   display: block;
 }
 .card li a:hover .headline { color: #0d9488; text-decoration: underline; }
-.headline { display: block; }
-.headline b { color: #0d9488; font-weight: 700; }
-.kr { display: block; margin-top: 4px; font-size: 11.5px; color: #6b7280; }
-.kr b { color: #374151; font-weight: 700; }
+.headline { display: block; font-weight: 600; }
+.headline b { color: #0d9488; font-weight: 800; }
+.kr { display: block; margin-top: 5px; font-size: 13.5px; color: #565f75; font-weight: 500; }
+.kr b { color: #263042; font-weight: 800; }
 .card li time {
   display: block;
-  margin-top: 4px;
-  font-size: 11px;
+  margin-top: 5px;
+  font-size: 12px;
   color: #9aa2b1;
+}
+@media (max-width: 760px) {
+  .card li { font-size: 16.5px; padding: 15px 18px; }
+  .kr { font-size: 14px; }
+  .card li time { font-size: 12.5px; }
 }
 .badge-unh { background: #0072bc; color: #fff; }
 .badge-wb { background: #002244; color: #fff; }
 .badge-oecd { background: #1b3a5c; color: #fff; }
 .badge-bkg { background: #002f6c; color: #fff; }
 .badge-lincoln { background: #6b4226; color: #fff; }
+.badge-ui { background: #003057; color: #fff; }
 .badge-c40 { background: #dc2626; color: #fff; }
 .badge-uli { background: #1d4ed8; color: #fff; }
 .badge-citylab { background: #111318; color: #fff; }
@@ -137,7 +147,7 @@ footer b { color: #5b6478; }
 </div>
 
 <div class="updated-bar">
-  <span>마지막 업데이트: <b id="updated-time">2026-08-16 15:47 (KST)</b></span>
+  <span>마지막 업데이트: <b id="updated-time">2026-08-16 16:00 (KST)</b></span>
   <span>다음 자동 갱신: 매주 목요일 오전 7시</span>
 </div>
 
@@ -276,6 +286,31 @@ footer b { color: #5b6478; }
       </ul>
     </div>
 
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-ui">UI</span> Urban Institute</h2>
+        <span>Housing Policy</span>
+      </div>
+      <ul>
+        <li><a href="https://www.urban.org/research/publication/integrating-affordable-housing-market-rate-developments" target="_blank" rel="noopener">
+          <span class="headline">Integrating <b>Affordable Housing</b> in Market-Rate Developments</span>
+          <span class="kr">민간분양 개발에 <b>의무형 저렴주택(IZ)</b> 통합 방식 분석 — 워싱턴DC 사례</span>
+          <time>1월</time></a></li>
+        <li><a href="https://www.urban.org/urban-wire/how-zoning-fits-national-housing-affordability-strategy" target="_blank" rel="noopener">
+          <span class="headline">How <b>Zoning</b> Fits into a National Housing Affordability Strategy</span>
+          <span class="kr"><b>토지용도지역제(조닝)</b>가 전국 주택 affordability 전략에서 갖는 역할</span>
+          <time>2026</time></a></li>
+        <li><a href="https://www.urban.org/urban-wire/what-made-zoning-reforms-philadelphia-and-new-york-city-impactful" target="_blank" rel="noopener">
+          <span class="headline">What Made <b>Zoning Reforms</b> in Philadelphia and New York City Impactful?</span>
+          <span class="kr">필라델피아·뉴욕 <b>조닝 개혁</b>이 효과를 낸 이유 분석</span>
+          <time>2026</time></a></li>
+        <li><a href="https://www.urban.org/research/publication/unifying-upzoning-affordable-housing-production-strategies-report" target="_blank" rel="noopener">
+          <span class="headline">Unifying <b>Upzoning</b> with Affordable Housing Production Strategies</span>
+          <span class="kr"><b>업조닝(용적 완화)</b>과 저렴주택 공급전략의 결합 방안</span>
+          <time>2026</time></a></li>
+      </ul>
+    </div>
+
   </div>
 
   <h2 class="section-title">🌆 도시 네트워크 · 미디어</h2>
@@ -361,7 +396,7 @@ footer b { color: #5b6478; }
 </main>
 
 <footer>
-  <p><b>안내:</b> 이 페이지는 UN-Habitat, World Bank Urban Development, OECD Cities, Brookings Metro, Lincoln Institute of Land Policy, C40 Cities, ULI Asia Pacific, Bloomberg CityLab이 공개한 보고서·뉴스 헤드라인을 자동 수집·번역하여 제공합니다. 원문 확인은 각 링크를 참고하세요.</p>
+  <p><b>안내:</b> 이 페이지는 UN-Habitat, World Bank Urban Development, OECD Cities, Brookings Metro, Lincoln Institute of Land Policy, Urban Institute, C40 Cities, ULI Asia Pacific, Bloomberg CityLab이 공개한 보고서·뉴스 헤드라인을 자동 수집·번역하여 제공합니다. 원문 확인은 각 링크를 참고하세요.</p>
   <p>매주 목요일 오전 7시 자동 갱신됩니다.</p>
 </footer>
 
