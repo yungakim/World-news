@@ -1,0 +1,369 @@
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Urban Planning Briefings",
+  "schemaVersion": 1,
+  "description": "UN-Habitat, World Bank, OECD 등 국제기구와 Brookings Metro, Lincoln Institute 등 싱크탱크, C40·ULI·Bloomberg CityLab 등 도시 네트워크·미디어의 최신 보고서·정책브리핑 헤드라인. 매주 자동 갱신."
+}
+</script>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Urban Planning Briefings</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+  background: #f4f6fa;
+  color: #1a1f36;
+}
+header {
+  background: linear-gradient(135deg, #0f766e, #0d9488);
+  color: #fff;
+  padding: 22px 28px;
+}
+header h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+header p { margin: 6px 0 0; font-size: 13px; opacity: 0.9; }
+.updated-bar {
+  background: #fff;
+  border-bottom: 1px solid #e5e9f2;
+  padding: 10px 28px;
+  font-size: 12.5px;
+  color: #5b6478;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.updated-bar b { color: #0d9488; }
+.nav-bar {
+  background: #0b1f1c;
+  padding: 8px 28px;
+  font-size: 12.5px;
+}
+.nav-bar a { color: #a7e8de; text-decoration: none; margin-right: 16px; }
+.nav-bar a:hover { text-decoration: underline; }
+.nav-bar a.active { color: #fff; font-weight: 700; }
+main {
+  padding: 22px 28px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.section-title { font-size: 15px; font-weight: 700; margin: 26px 0 10px; padding-left: 8px; border-left: 4px solid #0d9488; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card-head {
+  padding: 14px 16px;
+  border-bottom: 2px solid #0d9488;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-head h2 { margin: 0; font-size: 16px; font-weight: 700; }
+.card-head span { font-size: 11.5px; color: #8a93a6; }
+.card ul { list-style: none; margin: 0; padding: 0; }
+.card li {
+  padding: 11px 16px;
+  border-bottom: 1px solid #eef1f6;
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+.card li:last-child { border-bottom: none; }
+.card li a {
+  color: #1a1f36;
+  text-decoration: none;
+  display: block;
+}
+.card li a:hover .headline { color: #0d9488; text-decoration: underline; }
+.headline { display: block; }
+.headline b { color: #0d9488; font-weight: 700; }
+.kr { display: block; margin-top: 4px; font-size: 11.5px; color: #6b7280; }
+.kr b { color: #374151; font-weight: 700; }
+.card li time {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #9aa2b1;
+}
+.badge-unh { background: #0072bc; color: #fff; }
+.badge-wb { background: #002244; color: #fff; }
+.badge-oecd { background: #1b3a5c; color: #fff; }
+.badge-bkg { background: #002f6c; color: #fff; }
+.badge-lincoln { background: #6b4226; color: #fff; }
+.badge-c40 { background: #dc2626; color: #fff; }
+.badge-uli { background: #1d4ed8; color: #fff; }
+.badge-citylab { background: #111318; color: #fff; }
+.badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+footer {
+  max-width: 1300px;
+  margin: 8px auto 30px;
+  padding: 16px 28px 0;
+  font-size: 12px;
+  color: #8a93a6;
+  border-top: 1px solid #e5e9f2;
+}
+footer p { margin: 8px 0; }
+footer b { color: #5b6478; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏙 Urban Planning Briefings — 도시계획가를 위한 국제 리포트</h1>
+  <p>UN-Habitat · World Bank · OECD 등 국제기구, Brookings Metro · Lincoln Institute 등 싱크탱크, C40 · ULI · Bloomberg CityLab 등 도시 네트워크·미디어의 최신 보고서·소식을 모아봅니다</p>
+</header>
+
+<div class="nav-bar">
+  <a href="./index.html">🌍 World News Headlines</a>
+  <a href="./urban.html">🏙 Urban Policy News</a>
+  <a href="./briefings.html" class="active">🌐 Urban Planning Briefings</a>
+</div>
+
+<div class="updated-bar">
+  <span>마지막 업데이트: <b id="updated-time">2026-08-16 15:47 (KST)</b></span>
+  <span>다음 자동 갱신: 매주 목요일 오전 7시</span>
+</div>
+
+<main>
+
+  <h2 class="section-title">🌐 국제기구 리포트</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-unh">UNH</span> UN-Habitat</h2>
+        <span>Reports</span>
+      </div>
+      <ul>
+        <li><a href="https://unhabitat.org/world-cities-report-2026" target="_blank" rel="noopener">
+          <span class="headline"><b>World Cities Report 2026</b>: The Global Housing Crisis — Pathways to Action</span>
+          <span class="kr"><b>세계도시보고서 2026</b>: 세계 주택위기와 해법 — 주택 부족분 2010년 2억5100만 호 → 2023년 2억8800만 호로 증가</span>
+          <time>5월</time></a></li>
+        <li><a href="https://unhabitat.org/spatial-inclusion-in-cities-regional-trends-report" target="_blank" rel="noopener">
+          <span class="headline"><b>Spatial Inclusion in Cities</b>: Regional Trends Report — 6개 권역 팩트시트·도시재생 사례</span>
+          <span class="kr"><b>도시 공간포용성</b> 지역동향 보고서 — 6개 권역 팩트시트와 도시재생 사례로 본 포용정책</span>
+          <time>2026</time></a></li>
+        <li><a href="https://unhabitat.org/annual-report-2024" target="_blank" rel="noopener">
+          <span class="headline">UN-Habitat <b>Annual Report 2024</b>: Adequate Housing for All</span>
+          <span class="kr">UN-Habitat <b>연례보고서 2024</b>: 모두를 위한 적정주택 — 불평등 완화·기후대응 성과</span>
+          <time>2024</time></a></li>
+        <li><a href="https://unhabitat.org/global-assessment-of-responsible-ai-in-cities" target="_blank" rel="noopener">
+          <span class="headline">Global Assessment of <b>Responsible AI in Cities</b> — 사례연구 70여 건</span>
+          <span class="kr">도시 내 <b>책임있는 AI</b> 글로벌 평가 — 사례연구 70여 건으로 본 시민중심 스마트시티</span>
+          <time>2024</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-wb">WB</span> World Bank Urban</h2>
+        <span>Reports</span>
+      </div>
+      <ul>
+        <li><a href="https://www.worldbank.org/en/news/press-release/2026/06/09/harnessing-urban-growth-for-recovery-new-world-bank-report-charts-pathways-for-resilient-and-inclusive-cities-in-south-s" target="_blank" rel="noopener">
+          <span class="headline"><b>South Sudan Urbanization Review</b>: Cities as Anchors of Recovery and Resilience</span>
+          <span class="kr"><b>남수단 도시화 리뷰</b>: 회복과 안정의 거점이 되는 도시</span>
+          <time>6월 9일</time></a></li>
+        <li><a href="https://www.worldbank.org/en/news/immersive-story/2026/04/03/cities-under-water-charting-a-resilient-future-in-an-urbanizing-world" target="_blank" rel="noopener">
+          <span class="headline"><b>Cities Under Water</b>: charting a resilient future in an urbanizing world</span>
+          <span class="kr"><b>물에 잠기는 도시들</b> — 도시화 시대의 홍수 회복력 확보 방안</span>
+          <time>4월 3일</time></a></li>
+        <li><a href="https://www.worldbank.org/en/results/2026/01/26/strengthening-flood-resilience-in-rapidly-growing-cities" target="_blank" rel="noopener">
+          <span class="headline"><b>Strengthening Flood Resilience</b> in Rapidly Growing Cities — 58개국 69개 프로젝트</span>
+          <span class="kr">급성장 도시의 <b>홍수 회복력 강화</b> — 58개국 69개 프로젝트, 44억 달러 투입</span>
+          <time>1월 26일</time></a></li>
+        <li><a href="https://www.worldbank.org/en/topic/urbandevelopment/publication/banking-on-cities" target="_blank" rel="noopener">
+          <span class="headline"><b>Banking on Cities</b>: Investing in Resilient and Low-Carbon Urbanization — 최대 $2.7tn/yr</span>
+          <span class="kr"><b>도시에 투자하기</b>: 저탄소 회복력 도시화에 연간 최대 2조7000억 달러 소요</span>
+          <time>2025</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-oecd">OECD</span> OECD Cities</h2>
+        <span>Regional Development</span>
+      </div>
+      <ul>
+        <li><a href="https://www.oecd.org/en/publications/what-works-for-inclusive-growth-in-cities_680809c3-en.html" target="_blank" rel="noopener">
+          <span class="headline"><b>What Works for Inclusive Growth in Cities</b> — 5대 정책축 기반 실행 로드맵</span>
+          <span class="kr"><b>도시의 포용적 성장</b> 실천전략 — 교육·노동시장·주거·인프라·기후 5대 정책축</span>
+          <time>6월 17일</time></a></li>
+        <li><a href="https://www.oecd.org/en/publications/oecd-regions-and-cities-at-a-glance-2024_f42db3bf-en.html" target="_blank" rel="noopener">
+          <span class="headline"><b>OECD Regions and Cities at a Glance 2024</b> — 대도시 주거비 10년새 68% 상승</span>
+          <span class="kr"><b>OECD 지역·도시 통계 2024</b> — 대도시권 주거비 10년간 68% 급등</span>
+          <time>12월 6일 (2024)</time></a></li>
+        <li><a href="https://www.oecd.org/en/publications/advancing-inclusive-growth-in-cities-for-people-at-risk-of-poverty-or-social-exclusion_6f975539-en.html" target="_blank" rel="noopener">
+          <span class="headline">Advancing inclusive growth in cities for people at risk of <b>poverty or social exclusion</b></span>
+          <span class="kr">도시의 포용적 성장 — EU 3700만 명이 겪는 <b>빈곤·사회적 배제</b> 위험 대응</span>
+          <time>6월</time></a></li>
+        <li><a href="https://www.oecd.org/en/publications/global-state-of-national-urban-policy-2024_4db6994c-en.html" target="_blank" rel="noopener">
+          <span class="headline"><b>Global State of National Urban Policy</b> 2024</span>
+          <span class="kr"><b>국가 도시정책 글로벌 현황</b> 2024</span>
+          <time>2024</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">🏛 싱크탱크 · 정책 리서치</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-bkg">BKG</span> Brookings Metro</h2>
+        <span>Research</span>
+      </div>
+      <ul>
+        <li><a href="https://www.brookings.edu/articles/metro-monitor-2025-growth-and-affordability-trends/" target="_blank" rel="noopener">
+          <span class="headline"><b>Metro Monitor 2025</b>: growth and affordability trends across 195 largest US metros</span>
+          <span class="kr"><b>메트로 모니터 2025</b>: 미국 195개 대도시권 성장·주거비 부담 추세</span>
+          <time>2025</time></a></li>
+        <li><a href="https://www.brookings.edu/articles/states-of-affordability-a-series-on-where-and-why-us-households-struggle-to-make-ends-meet/" target="_blank" rel="noopener">
+          <span class="headline"><b>States of Affordability</b>: where and why US households struggle to make ends meet</span>
+          <span class="kr"><b>주거비 부담 실태</b> 시리즈: 미국 가계가 생계에 어려움을 겪는 지역과 이유</span>
+          <time>2026</time></a></li>
+        <li><a href="https://www.brookings.edu/articles/small-and-midsized-downtown-recovery-overcoming-obstacles-and-uplifting-innovative-solutions-in-four-regions/" target="_blank" rel="noopener">
+          <span class="headline">Small and midsized <b>downtown recovery</b>: obstacles and innovative solutions in four regions</span>
+          <span class="kr">중소도시 <b>다운타운 회복</b>: 4개 지역의 장애 요인과 혁신 해법</span>
+          <time>2026</time></a></li>
+        <li><a href="https://www.brookings.edu/news/brookings-metro-and-the-center-for-economic-inclusion-announce-partnership-with-network-of-cities-to-help-close-racial-wealth-gaps/" target="_blank" rel="noopener">
+          <span class="headline">Brookings Metro & Center for Economic Inclusion launch city network to close <b>racial wealth gaps</b></span>
+          <span class="kr">브루킹스 메트로, <b>인종 간 자산격차</b> 해소 위한 도시 네트워크 파트너십 발표</span>
+          <time>2026</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-lincoln">LILP</span> Lincoln Institute of Land Policy</h2>
+        <span>Land Policy</span>
+      </div>
+      <ul>
+        <li><a href="https://www.lincolninst.edu/publications/other/50-state-property-tax-comparison-study/" target="_blank" rel="noopener">
+          <span class="headline"><b>50-State Property Tax Comparison Study</b>: why rates vary across 100+ US cities</span>
+          <span class="kr"><b>50개 주 재산세 비교연구</b>: 미국 100여 개 도시 간 세율 격차의 원인</span>
+          <time>4월</time></a></li>
+        <li><a href="https://www.lincolninst.edu/publications/land-lines-magazine/issues/spring-summer-2026/" target="_blank" rel="noopener">
+          <span class="headline"><b>Land Lines</b> Spring/Summer 2026: redeveloping public land for affordable housing, agrivoltaics</span>
+          <span class="kr"><b>랜드라인즈</b> 2026 봄/여름호: 공공토지 재개발을 통한 저렴주택 공급, 영농형 태양광</span>
+          <time>봄/여름호</time></a></li>
+        <li><a href="https://www.lincolninst.edu/publications/articles/property-tax-fifty-state-study-shows-property-tax-inequities-from-assessment-limits-continue-grow/" target="_blank" rel="noopener">
+          <span class="headline">Fifty-state study: <b>property tax inequities</b> from assessment limits continue to grow</span>
+          <span class="kr">50개 주 연구: 과세평가 상한제로 인한 <b>재산세 불평등</b> 계속 확대</span>
+          <time>2026</time></a></li>
+        <li><a href="https://www.lincolninst.edu/publications/policy-focus-reports/preserving-affordable-homeownership-municipal-partnerships-community-land-trusts/" target="_blank" rel="noopener">
+          <span class="headline"><b>Preserving Affordable Homeownership</b>: Municipal Partnerships with Community Land Trusts</span>
+          <span class="kr"><b>저렴한 자가주택 보존하기</b>: 지자체-<b>커뮤니티 랜드트러스트</b> 파트너십 115곳 분석</span>
+          <time>2024</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">🌆 도시 네트워크 · 미디어</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-c40">C40</span> C40 Cities</h2>
+        <span>Climate Cities</span>
+      </div>
+      <ul>
+        <li><a href="https://www.c40.org/news/english-launch-of-the-e-bus-procurement-observatory-for-latin-america-and-the-caribbean-lac/" target="_blank" rel="noopener">
+          <span class="headline">Launch of the <b>E-Bus Procurement Observatory</b> for Latin America and the Caribbean</span>
+          <span class="kr">중남미·카리브해 지역 <b>전기버스 조달 관측소</b> 신규 출범</span>
+          <time>8월 12일</time></a></li>
+        <li><a href="https://www.c40.org/news/young-people-are-reimagining-climate-resilient-cities/" target="_blank" rel="noopener">
+          <span class="headline">Young people are reimagining <b>climate-resilient cities</b></span>
+          <span class="kr">국제 청소년의 날 — 청년이 그리는 <b>기후회복력 도시</b></span>
+          <time>8월 12일</time></a></li>
+        <li><a href="https://www.c40.org/news/latin-american-cities-reach-historic-milestone-of-10000-electric-buses-in-operation/" target="_blank" rel="noopener">
+          <span class="headline">Latin American cities reach milestone of <b>10,000 electric buses</b> in operation</span>
+          <span class="kr">중남미 도시 <b>전기버스 1만 대</b> 운행 돌파 — 상파울루 2위 규모</span>
+          <time>8월 11일</time></a></li>
+        <li><a href="https://www.c40.org/news/jameel-c40-urban-planning-climate-labs-showcase-enhanced-climate-planning-policies-benefitting-4-5-million-people-to-city-leaders-at-london-climate-action-week/" target="_blank" rel="noopener">
+          <span class="headline">Jameel C40 <b>Urban Planning Climate Labs</b> showcase policies benefitting 4.5M people</span>
+          <span class="kr"><b>자밀 C40 도시계획 기후랩</b> — 런던 기후행동주간서 정책 성과 발표</span>
+          <time>7월</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-uli">ULI</span> ULI Asia Pacific</h2>
+        <span>Urban Land</span>
+      </div>
+      <ul>
+        <li><a href="https://knowledge.uli.org/en/reports/emerging-trends/2026/emerging-trends-in-real-estate-asia-pacific-2026" target="_blank" rel="noopener">
+          <span class="headline"><b>Emerging Trends in Real Estate</b> Asia Pacific 2026</span>
+          <span class="kr">ULI·PwC 공동 <b>연례 부동산 전망 보고서</b> 2026년판 — 신중한 낙관론</span>
+          <time>2026</time></a></li>
+        <li><a href="https://asia.uli.org/geopolitical-uncertainty-a-brake-on-real-estates-recovery/" target="_blank" rel="noopener">
+          <span class="headline"><b>Geopolitical Uncertainty</b> a Brake on Real Estate's Recovery</span>
+          <span class="kr"><b>지정학적 불확실성</b>이 부동산 시장 회복의 발목을 잡는다</span>
+          <time>2026</time></a></li>
+        <li><a href="https://asia.uli.org/uli-asia-pacific-announces-14-winners-of-the-2026-uli-asia-pacific-awards-for-excellence/" target="_blank" rel="noopener">
+          <span class="headline">ULI Asia Pacific Announces 14 Winners of the <b>2026 Awards for Excellence</b></span>
+          <span class="kr">ULI 아시아태평양 <b>2026 어워드 포 엑설런스</b> 14개 수상작 발표</span>
+          <time>2026</time></a></li>
+        <li><a href="https://knowledge.uli.org/reports/research-reports/2025/2025-uli-asia-pacific-home-attainability-index" target="_blank" rel="noopener">
+          <span class="headline">2025 ULI Asia Pacific <b>Home Attainability Index</b></span>
+          <span class="kr">아시아태평양 <b>주택 구매가능성 지수</b> 2025 — 51개 시장 41개 도시 분석</span>
+          <time>2025</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-citylab">CL</span> Bloomberg CityLab</h2>
+        <span>Urban Media</span>
+      </div>
+      <ul>
+        <li><a href="https://www.bloomberg.com/news/features/2026-08-14/nyc-s-first-daylighting-project-tackles-flooding-by-reviving-a-buried-stream" target="_blank" rel="noopener">
+          <span class="headline">NYC's First <b>Daylighting Project</b> Tackles Flooding by Reviving a Buried Stream</span>
+          <span class="kr">뉴욕시 첫 <b>하천 복원(데이라이팅)</b> 프로젝트 — 매립 하천 되살려 홍수 대응</span>
+          <time>8월 14일</time></a></li>
+        <li><a href="https://www.bloomberg.com/news/articles/2026-08-11/citadel-s-nyc-tower-project-advances-as-developers-forge-deal" target="_blank" rel="noopener">
+          <span class="headline">Citadel's <b>NYC Tower Project</b> Advances as Developers Forge Deal</span>
+          <span class="kr">시타델 <b>뉴욕 신사옥 프로젝트</b> 개발사 간 합의로 진전</span>
+          <time>8월 11일</time></a></li>
+        <li><a href="https://www.bloomberg.com/news/newsletters/2026-08-14/how-circulating-libraries-feed-india-s-reading-habit-citylab-weekly" target="_blank" rel="noopener">
+          <span class="headline">How <b>Circulating Libraries</b> Feed India's Reading Habit</span>
+          <span class="kr">인도의 <b>순회도서관</b>이 독서 문화를 지탱하는 법</span>
+          <time>8월 14일</time></a></li>
+        <li><a href="https://www.bloomberg.com/news/features/2026-03-27/inventing-the-cities-of-future-with-lessons-from-the-past" target="_blank" rel="noopener">
+          <span class="headline">What <b>Urban Planning's Past</b> Says About Tomorrow's Cities</span>
+          <span class="kr"><b>도시계획의 과거</b>에서 찾는 미래 도시의 실마리</span>
+          <time>3월</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <p><b>안내:</b> 이 페이지는 UN-Habitat, World Bank Urban Development, OECD Cities, Brookings Metro, Lincoln Institute of Land Policy, C40 Cities, ULI Asia Pacific, Bloomberg CityLab이 공개한 보고서·뉴스 헤드라인을 자동 수집·번역하여 제공합니다. 원문 확인은 각 링크를 참고하세요.</p>
+  <p>매주 목요일 오전 7시 자동 갱신됩니다.</p>
+</footer>
+
+</body>
+</html>
