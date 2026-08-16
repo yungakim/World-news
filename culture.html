@@ -1,0 +1,298 @@
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Urban Culture Watch",
+  "schemaVersion": 1,
+  "description": "도시·건축을 소재로 한 국내 전시·영화(다큐)·책 중 임팩트 있는 것들을 모은 페이지. 부정기 수동 갱신."
+}
+</script>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Urban Culture Watch — 도시·건축 전시·영화·책</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+  background: #f4f6fa;
+  color: #1a1f36;
+}
+header {
+  background: linear-gradient(135deg, #6d28d9, #8b5cf6);
+  color: #fff;
+  padding: 22px 28px;
+}
+header h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+header p { margin: 6px 0 0; font-size: 13px; opacity: 0.9; }
+.updated-bar {
+  background: #fff;
+  border-bottom: 1px solid #e5e9f2;
+  padding: 10px 28px;
+  font-size: 12.5px;
+  color: #5b6478;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.updated-bar b { color: #6d28d9; }
+.nav-bar {
+  background: #1e1533;
+  padding: 8px 28px;
+  font-size: 12.5px;
+}
+.nav-bar a { color: #d8c8ff; text-decoration: none; margin-right: 16px; }
+.nav-bar a:hover { text-decoration: underline; }
+.nav-bar a.active { color: #fff; font-weight: 700; }
+main {
+  padding: 22px 28px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.section-title { font-size: 17px; font-weight: 800; margin: 30px 0 12px; padding-left: 8px; border-left: 4px solid #6d28d9; }
+.section-sub { font-size: 12.5px; color: #8a93a6; margin: -8px 0 16px 12px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 760px) {
+  .grid { grid-template-columns: 1fr; }
+  main { padding: 16px 16px 32px; }
+}
+.card {
+  background: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-head {
+  padding: 14px 18px;
+  border-bottom: 2px solid #6d28d9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-head h2 { margin: 0; font-size: 17px; font-weight: 800; }
+.card-head span { font-size: 12px; color: #8a93a6; }
+.card ul { list-style: none; margin: 0; padding: 0; }
+.card li {
+  padding: 14px 18px;
+  border-bottom: 1px solid #eef1f6;
+  font-size: 15.5px;
+  line-height: 1.48;
+}
+.card li:last-child { border-bottom: none; }
+.card li a {
+  color: #1a1f36;
+  text-decoration: none;
+  display: block;
+}
+.card li a:hover .headline { color: #6d28d9; text-decoration: underline; }
+.headline { display: block; font-weight: 600; }
+.headline b { color: #6d28d9; font-weight: 800; }
+.kr { display: block; margin-top: 5px; font-size: 13.5px; color: #565f75; font-weight: 500; }
+.kr b { color: #263042; font-weight: 800; }
+.card li time {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #9aa2b1;
+}
+@media (max-width: 760px) {
+  .card li { font-size: 16.5px; padding: 15px 18px; }
+  .kr { font-size: 14px; }
+  .card li time { font-size: 12.5px; }
+}
+.badge-mmca1 { background: #002855; color: #fff; }
+.badge-mmca2 { background: #00468c; color: #fff; }
+.badge-sema { background: #009688; color: #fff; }
+.badge-siaff { background: #b91c1c; color: #fff; }
+.badge-doc { background: #78350f; color: #fff; }
+.badge-drama { background: #db2777; color: #fff; }
+.badge-book1 { background: #b45309; color: #fff; }
+.badge-book2 { background: #1e3a8a; color: #fff; }
+.badge-book3 { background: #166534; color: #fff; }
+.badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+footer {
+  max-width: 1300px;
+  margin: 8px auto 30px;
+  padding: 16px 28px 0;
+  font-size: 12px;
+  color: #8a93a6;
+  border-top: 1px solid #e5e9f2;
+}
+footer p { margin: 8px 0; }
+footer b { color: #5b6478; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏛 Urban Culture Watch — 도시·건축 전시·영화·책</h1>
+  <p>도시와 건축을 소재로 한 국내 전시·영화(다큐)·책 중 지금 볼만한 것들을 모아봅니다</p>
+</header>
+
+<div class="nav-bar">
+  <a href="./index.html">🌍 World News Headlines</a>
+  <a href="./urban.html">🏙 Urban Policy News</a>
+  <a href="./briefings.html">🌐 Urban Planning Briefings</a>
+  <a href="./culture.html" class="active">🏛 Urban Culture Watch</a>
+</div>
+
+<div class="updated-bar">
+  <span>마지막 업데이트: <b id="updated-time">2026-08-16 17:10 (KST)</b></span>
+  <span>부정기 수동 갱신</span>
+</div>
+
+<main>
+
+  <h2 class="section-title">🖼 전시</h2>
+  <p class="section-sub">공간·기억·빛을 다루는 건축적 설치·기획전 위주로 골랐습니다</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-mmca1">MMCA</span> 국립현대미술관 서울</h2>
+        <span>개인전</span>
+      </div>
+      <ul>
+        <li><a href="https://www.mmca.go.kr/exhibitions/exhibitionsDetail.do?exhFlag=2&exhId=202601200002041" target="_blank" rel="noopener">
+          <span class="headline"><b>서도호</b> 개인전 — 공간·기억·이주의 정체성을 다루는 대규모 회고전</span>
+          <span class="kr">한복 원단으로 재현한 '집' 등 <b>서도호</b> 대표작 총망라 — 학생 시절 초기작부터 최근 프로젝트까지</span>
+          <time>8월 27일 ~ 2027년 2월 9일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-mmca2">MMCA</span> 국립현대미술관 과천</h2>
+        <span>개관 40주년 기획전</span>
+      </div>
+      <ul>
+        <li><a href="https://www.fnnews.com/news/202607161836466774" target="_blank" rel="noopener">
+          <span class="headline">MMCA 과천 40주년: <b>빛의 상상들</b> — 원형 램프·회랑·브리지 등 건축적 특성을 활용한 전시</span>
+          <span class="kr">과천관의 산·조각공원·자연광·진입 동선까지 끌어들인 <b>건축 공간 자체가 주제</b>인 기획전</span>
+          <time>7월 10일 ~ 11월 29일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-sema">SeMA</span> 서울시립 북서울미술관</h2>
+        <span>2인전</span>
+      </div>
+      <ul>
+        <li><a href="https://sema.seoul.go.kr/kr/whatson/event/detail?evtNo=1314743" target="_blank" rel="noopener">
+          <span class="headline">타이틀 매치 — <b>오인환 vs. 장서영</b>: 휴먼 에러</span>
+          <span class="kr">서울시립미술관 2026년 의제 '기술' 연계 기획전 — 몸·공간·오작동을 다루는 2인전</span>
+          <time>8월 13일 ~ 10월 25일</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">🎬 영화·미디어</h2>
+  <p class="section-sub">건축영화제부터 재건축·재개발을 정면으로 다룬 다큐·드라마까지</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-siaff">SIAFF</span> 서울국제건축영화제</h2>
+        <span>영화제 · 아시아 유일 건축영화제</span>
+      </div>
+      <ul>
+        <li><a href="https://www.siaff.or.kr" target="_blank" rel="noopener">
+          <span class="headline">제18회 서울국제건축영화제 — 12개국 14편, 개막작 '프로세스: 진화하는 공공건축, 구마모토'(월드프리미어)</span>
+          <span class="kr">오프라인 아트하우스 모모(9/5~6) + 온라인 네이버TV(9/6~20) 동시 상영</span>
+          <time>9월 5일 ~ 9월 20일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-doc">DOC</span> 다큐멘터리</h2>
+        <span>독립영화 · 3개 영화제 수상</span>
+      </div>
+      <ul>
+        <li><a href="https://tvreport.co.kr/breaking/article/1068804/" target="_blank" rel="noopener">
+          <span class="headline">콘크리트 녹색섬 — <b>개포주공아파트</b> 재건축과 사라진 나무·기억을 기록한 다큐</span>
+          <span class="kr">2017년부터 개포주공 나무를 기록해온 이성민 감독作 — EBS국제다큐영화제·서울국제환경영화제·서울국제여성영화제 수상</span>
+          <time>2026 상영</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-drama">tvN</span> 대한민국에서 건물주 되는 법</h2>
+        <span>드라마 · TVING·Wavve</span>
+      </div>
+      <ul>
+        <li><a href="https://tvn.cjenm.com/ko/Mad-Concrete-Dreams/" target="_blank" rel="noopener">
+          <span class="headline"><b>영끌</b>로 건물주 된 남자가 빚더미에 몰려 납치극에 휘말리는 블랙코미디 (하정우·임수정 주연)</span>
+          <span class="kr"><b>건물주·재개발·영끌 부채</b>라는 지금 한국 부동산의 민낯을 스릴러로 풀어낸 화제작</span>
+          <time>2026.3.14 ~ 4.19 방영, VOD 스트리밍 중</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">📚 책</h2>
+  <p class="section-sub">건축가·평론가의 도시 비평서부터 2026년 부동산 트렌드 서적까지</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-book1">비평</span> 못된 건축</h2>
+        <span>이경훈 (국민대 건축학과 교수)</span>
+      </div>
+      <ul>
+        <li><a href="http://ch.yes24.com/Article/View/25598" target="_blank" rel="noopener">
+          <span class="headline">DDP·서울역 등 대한민국 대표 건축물을 <b>도시계획 맥락</b>에서 신랄하게 비판</span>
+          <span class="kr">"서울 역사가 최악의 못된 건축인 이유" — 저자 북토크(한겨레 구본준 기자와 대담) 화제</span>
+          <time>2026</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-book2">인문교양</span> 영화 속 건축 이야기 2026</h2>
+        <span>홍성용</span>
+      </div>
+      <ul>
+        <li><a href="https://www.hankyung.com/article/202606168511i" target="_blank" rel="noopener">
+          <span class="headline">1998년 국내 최초 '영화건축' 교양서, <b>27년 만에 개정판</b>으로 귀환</span>
+          <span class="kr">스크린 속 건축을 능동적 서사 주체로 분석 — OTT·AI가 바꾼 공간 지각까지 새로 추적</span>
+          <time>2026</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-book3">부동산</span> 부동산 트렌드 2026</h2>
+        <span>김경민 (서울대 환경대학원 교수)</span>
+      </div>
+      <ul>
+        <li><a href="https://product.kyobobook.co.kr/detail/S000217556705" target="_blank" rel="noopener">
+          <span class="headline">매년 발간되는 <b>부동산 트렌드</b> 시리즈 2026년판 — 데이터 기반 시장 전망</span>
+          <span class="kr">도시개발·정비사업 전문가 시각으로 짚는 2026년 한국 부동산 시장 전망</span>
+          <time>2026</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <p><b>안내:</b> 이 페이지는 국립현대미술관(MMCA)·서울시립미술관(SeMA)·서울국제건축영화제(SIAFF) 등 공식 채널 및 언론 보도를 바탕으로 도시·건축을 소재로 한 전시·영화·책을 선별해 소개합니다. 정기 자동 갱신 없이 필요 시 수동으로 업데이트됩니다. 전시 기간·상영 일정은 변동될 수 있으니 원문 링크에서 최신 정보를 확인하세요.</p>
+</footer>
+
+</body>
+</html>
