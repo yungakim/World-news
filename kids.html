@@ -1,0 +1,300 @@
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Kids Culture Map",
+  "schemaVersion": 1,
+  "description": "유아(미취학) 아이와 함께 갈 만한 전시·체험, 공연, 교육 프로그램을 모은 페이지. 부정기 수동 갱신."
+}
+</script>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Kids Culture Map — 아이랑 놀기</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+  background: #f4f6fa;
+  color: #1a1f36;
+}
+header {
+  background: linear-gradient(135deg, #db2777, #f472b6);
+  color: #fff;
+  padding: 22px 28px;
+}
+header h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+header p { margin: 6px 0 0; font-size: 13px; opacity: 0.9; }
+.updated-bar {
+  background: #fff;
+  border-bottom: 1px solid #e5e9f2;
+  padding: 10px 28px;
+  font-size: 12.5px;
+  color: #5b6478;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.updated-bar b { color: #db2777; }
+.nav-bar {
+  background: #2b0f1f;
+  padding: 8px 28px;
+  font-size: 12.5px;
+}
+.nav-bar a { color: #ffc9e3; text-decoration: none; margin-right: 16px; }
+.nav-bar a:hover { text-decoration: underline; }
+.nav-bar a.active { color: #fff; font-weight: 700; }
+main {
+  padding: 22px 28px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.section-title { font-size: 17px; font-weight: 800; margin: 30px 0 12px; padding-left: 8px; border-left: 4px solid #db2777; }
+.section-sub { font-size: 12.5px; color: #8a93a6; margin: -8px 0 16px 12px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 760px) {
+  .grid { grid-template-columns: 1fr; }
+  main { padding: 16px 16px 32px; }
+}
+.card {
+  background: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-head {
+  padding: 14px 18px;
+  border-bottom: 2px solid #db2777;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-head h2 { margin: 0; font-size: 17px; font-weight: 800; }
+.card-head span { font-size: 12px; color: #8a93a6; }
+.card ul { list-style: none; margin: 0; padding: 0; }
+.card li {
+  padding: 14px 18px;
+  border-bottom: 1px solid #eef1f6;
+  font-size: 15.5px;
+  line-height: 1.48;
+}
+.card li:last-child { border-bottom: none; }
+.card li a {
+  color: #1a1f36;
+  text-decoration: none;
+  display: block;
+}
+.card li a:hover .headline { color: #db2777; text-decoration: underline; }
+.headline { display: block; font-weight: 600; }
+.headline b { color: #db2777; font-weight: 800; }
+.kr { display: block; margin-top: 5px; font-size: 13.5px; color: #565f75; font-weight: 500; }
+.kr b { color: #263042; font-weight: 800; }
+.card li time {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #9aa2b1;
+}
+@media (max-width: 760px) {
+  .card li { font-size: 16.5px; padding: 15px 18px; }
+  .kr { font-size: 14px; }
+  .card li time { font-size: 12.5px; }
+}
+.badge-nm { background: #b45309; color: #fff; }
+.badge-fm { background: #0f766e; color: #fff; }
+.badge-scm { background: #db2777; color: #fff; }
+.badge-culture { background: #6d28d9; color: #fff; }
+.badge-nol { background: #dc2626; color: #fff; }
+.badge-sejong { background: #1e3a8a; color: #fff; }
+.badge-childlib { background: #059669; color: #fff; }
+.badge-seoullib { background: #0369a1; color: #fff; }
+.badge-edu { background: #9333ea; color: #fff; }
+.badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+footer {
+  max-width: 1300px;
+  margin: 8px auto 30px;
+  padding: 16px 28px 0;
+  font-size: 12px;
+  color: #8a93a6;
+  border-top: 1px solid #e5e9f2;
+}
+footer p { margin: 8px 0; }
+footer b { color: #5b6478; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧸 Kids Culture Map — 아이랑 놀기</h1>
+  <p>유아(미취학) 아이와 함께 갈 만한 전시·체험, 공연, 교육 프로그램을 모아봅니다</p>
+</header>
+
+<div class="nav-bar">
+  <a href="./index.html">🌍 World News Headlines</a>
+  <a href="./urban.html">🏙 Urban Policy News</a>
+  <a href="./briefings.html">🌐 Urban Planning Briefings</a>
+  <a href="./culture.html">🏛 Urban Culture Watch</a>
+  <a href="./career.html">🧭 Career &amp; Contest Watch</a>
+  <a href="./kids.html" class="active">🧸 Kids Culture Map</a>
+</div>
+
+<div class="updated-bar">
+  <span>마지막 업데이트: <b id="updated-time">2026-08-18 14:35 (KST)</b></span>
+  <span>부정기 수동 갱신</span>
+</div>
+
+<main>
+
+  <h2 class="section-title">🎨 전시·체험</h2>
+  <p class="section-sub">유아 눈높이에 맞춘 상설·기획 체험형 전시 공간</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-nm">국립</span> 국립어린이박물관</h2>
+        <span>세종 · 상설전시</span>
+      </div>
+      <ul>
+        <li><a href="https://www.museum.go.kr/CHILD" target="_blank" rel="noopener">
+          <span class="headline">국립어린이박물관 — <b>여름방학 연장개관</b>(7/28~8/17) 및 전시연계 교육 프로그램</span>
+          <span class="kr">전시와 연계한 <b>유아 방학 체험 프로그램</b> 운영 중, 홈페이지에서 일정 확인</span>
+          <time>여름방학 연장개관 종료 후에도 상시 체험 가능</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-fm">민속</span> 국립민속박물관 어린이박물관</h2>
+        <span>서울 종로 · 상설전시</span>
+      </div>
+      <ul>
+        <li><a href="https://www.nfm.go.kr/kids/main.do" target="_blank" rel="noopener">
+          <span class="headline">국립민속박물관 어린이박물관 — <b>다문화 감성</b> 체험형 상설전시</span>
+          <span class="kr">세계 여러 나라 생활문화를 몸으로 체험하며 배우는 <b>유아·어린이 전용관</b></span>
+          <time>상설</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-scm">상상나라</span> 서울상상나라</h2>
+        <span>서울 광진 · 복합체험공간</span>
+      </div>
+      <ul>
+        <li><a href="https://www.seoulchildrensmuseum.org/" target="_blank" rel="noopener">
+          <span class="headline">서울상상나라 — 어린이 중심 <b>복합체험놀이공간</b></span>
+          <span class="kr">서울시 운영 <b>어린이 전용 체험시설</b> — 상설 전시관·체험 프로그램 다수 운영</span>
+          <time>상시</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">🎭 공연</h2>
+  <p class="section-sub">인형극·뮤지컬 등 유아 눈높이 공연 정보 포털</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-culture">서울</span> 서울문화포털 — 공연</h2>
+        <span>서울시 공식 포털</span>
+      </div>
+      <ul>
+        <li><a href="https://culture.seoul.go.kr/culture/culture/cultureEvent/list.do?menuNo=200008" target="_blank" rel="noopener">
+          <span class="headline">서울문화포털 <b>공연 목록</b> — 어린이·가족 공연 필터로 확인 가능</span>
+          <span class="kr">서울시 전역의 <b>공연 정보</b>를 날짜·구·장르별로 검색</span>
+          <time>상시 업데이트</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-nol">NOL</span> NOL 티켓 — 아동/가족</h2>
+        <span>뮤지컬 예매</span>
+      </div>
+      <ul>
+        <li><a href="http://ticket.interpark.com/TPGoodsList.asp?Ca=Fam&SubCa=Fam_M" target="_blank" rel="noopener">
+          <span class="headline">NOL 티켓 — <b>아동/가족 뮤지컬</b> 전체 목록·예매</span>
+          <span class="kr">현재 공연 중·예정인 <b>유아·어린이 뮤지컬</b>을 한 번에 검색·예매</span>
+          <time>상시 업데이트</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-sejong">세종</span> 세종문화회관</h2>
+        <span>공연일정</span>
+      </div>
+      <ul>
+        <li><a href="https://www.sejongpac.or.kr/portal/performance/performance/performList.do?menuNo=200320" target="_blank" rel="noopener">
+          <span class="headline">세종문화회관 <b>공연일정</b> 전체 목록</span>
+          <span class="kr"><b>세종문화회관</b> 대극장·체임버홀 등 전체 공연 일정 확인</span>
+          <time>상시 업데이트</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">📚 교육 프로그램</h2>
+  <p class="section-sub">도서관·문화포털이 운영하는 유아 대상 독서·체험 프로그램</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-childlib">교육청</span> 서울특별시교육청 어린이도서관</h2>
+        <span>영유아 프로그램</span>
+      </div>
+      <ul>
+        <li><a href="https://childlib.sen.go.kr/childlib/index.do" target="_blank" rel="noopener">
+          <span class="headline">"도서관에서 책이랑 놀아요" 등 <b>영·유아 대면 프로그램</b> 상시 모집</span>
+          <span class="kr">2026 여름방학특강·<b>체험동화마을</b>·친구와 함께하는 도서관 DAY(유아) 등 운영</span>
+          <time>상시 모집</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-seoullib">서울도서관</span> 서울도서관</h2>
+        <span>독서문화 프로그램</span>
+      </div>
+      <ul>
+        <li><a href="https://lib.seoul.go.kr/" target="_blank" rel="noopener">
+          <span class="headline">서울도서관 — <b>독서문화 프로그램</b> 및 어린이·가족 프로그램 안내</span>
+          <span class="kr">서울시 대표도서관, <b>가족 단위 독서·문화 프로그램</b> 상시 운영</span>
+          <time>상시</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-edu">서울</span> 서울문화포털 — 교육/체험</h2>
+        <span>서울시 공식 포털</span>
+      </div>
+      <ul>
+        <li><a href="https://culture.seoul.go.kr/culture/culture/cultureEvent/list.do?searchCate=EDUEXP&menuNo=200011" target="_blank" rel="noopener">
+          <span class="headline">서울문화포털 <b>교육/체험 프로그램</b> 전체 목록</span>
+          <span class="kr">서울 전역 박물관·문화센터의 <b>유아 교육·체험 프로그램</b>을 한 번에 검색</span>
+          <time>상시 업데이트</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <p><b>안내:</b> 이 페이지는 국립어린이박물관·국립민속박물관·서울상상나라 등 유아 체험시설과 서울문화포털·서울도서관·서울특별시교육청 어린이도서관 등 서울시 공식 포털에서 확인 가능한 정보를 모아 정리한 것입니다. 개별 전시·공연·프로그램은 기간이 지나면 종료되니, 링크를 클릭해 최신 일정을 직접 확인하세요. 유아(미취학) 아이 기준으로 선별했습니다.</p>
+</footer>
+
+</body>
+</html>

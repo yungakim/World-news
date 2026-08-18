@@ -1,0 +1,344 @@
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Urban Career & Contest Watch",
+  "schemaVersion": 1,
+  "description": "건축·도시계획 업계 채용정보(연구기관·공사·설계사무소)와 도시·데이터 관련 공모전을 모은 페이지. 부정기 수동 갱신."
+}
+</script>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Urban Career &amp; Contest Watch — 채용·공모전</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+  background: #f4f6fa;
+  color: #1a1f36;
+}
+header {
+  background: linear-gradient(135deg, #c2410c, #ea580c);
+  color: #fff;
+  padding: 22px 28px;
+}
+header h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+header p { margin: 6px 0 0; font-size: 13px; opacity: 0.9; }
+.updated-bar {
+  background: #fff;
+  border-bottom: 1px solid #e5e9f2;
+  padding: 10px 28px;
+  font-size: 12.5px;
+  color: #5b6478;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.updated-bar b { color: #c2410c; }
+.nav-bar {
+  background: #241207;
+  padding: 8px 28px;
+  font-size: 12.5px;
+}
+.nav-bar a { color: #ffd7b8; text-decoration: none; margin-right: 16px; }
+.nav-bar a:hover { text-decoration: underline; }
+.nav-bar a.active { color: #fff; font-weight: 700; }
+main {
+  padding: 22px 28px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.section-title { font-size: 17px; font-weight: 800; margin: 30px 0 12px; padding-left: 8px; border-left: 4px solid #c2410c; }
+.section-sub { font-size: 12.5px; color: #8a93a6; margin: -8px 0 16px 12px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 760px) {
+  .grid { grid-template-columns: 1fr; }
+  main { padding: 16px 16px 32px; }
+}
+.card {
+  background: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-head {
+  padding: 14px 18px;
+  border-bottom: 2px solid #c2410c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-head h2 { margin: 0; font-size: 17px; font-weight: 800; }
+.card-head span { font-size: 12px; color: #8a93a6; }
+.card ul { list-style: none; margin: 0; padding: 0; }
+.card li {
+  padding: 14px 18px;
+  border-bottom: 1px solid #eef1f6;
+  font-size: 15.5px;
+  line-height: 1.48;
+}
+.card li:last-child { border-bottom: none; }
+.card li a {
+  color: #1a1f36;
+  text-decoration: none;
+  display: block;
+}
+.card li a:hover .headline { color: #c2410c; text-decoration: underline; }
+.headline { display: block; font-weight: 600; }
+.headline b { color: #c2410c; font-weight: 800; }
+.kr { display: block; margin-top: 5px; font-size: 13.5px; color: #565f75; font-weight: 500; }
+.kr b { color: #263042; font-weight: 800; }
+.card li time {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #9aa2b1;
+}
+@media (max-width: 760px) {
+  .card li { font-size: 16.5px; padding: 15px 18px; }
+  .kr { font-size: 14px; }
+  .card li time { font-size: 12.5px; }
+}
+.badge-krihs { background: #6b4226; color: #fff; }
+.badge-lh { background: #0b5ed7; color: #fff; }
+.badge-etc { background: #7c2d12; color: #fff; }
+.badge-jl { background: #1e3a8a; color: #fff; }
+.badge-hr { background: #b45309; color: #fff; }
+.badge-hb { background: #166534; color: #fff; }
+.badge-data { background: #0369a1; color: #fff; }
+.badge-seoul { background: #009688; color: #fff; }
+.badge-wev { background: #9333ea; color: #fff; }
+.badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+footer {
+  max-width: 1300px;
+  margin: 8px auto 30px;
+  padding: 16px 28px 0;
+  font-size: 12px;
+  color: #8a93a6;
+  border-top: 1px solid #e5e9f2;
+}
+footer p { margin: 8px 0; }
+footer b { color: #5b6478; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🧭 Urban Career &amp; Contest Watch — 채용·공모전</h1>
+  <p>건축·도시계획 업계 채용정보와 도시·데이터 관련 공모전을 한 곳에 모아봅니다</p>
+</header>
+
+<div class="nav-bar">
+  <a href="./index.html">🌍 World News Headlines</a>
+  <a href="./urban.html">🏙 Urban Policy News</a>
+  <a href="./briefings.html">🌐 Urban Planning Briefings</a>
+  <a href="./culture.html">🏛 Urban Culture Watch</a>
+  <a href="./career.html" class="active">🧭 Career &amp; Contest Watch</a>
+  <a href="./kids.html">🧸 Kids Culture Map</a>
+</div>
+
+<div class="updated-bar">
+  <span>마지막 업데이트: <b id="updated-time">2026-08-18 15:05 (KST) — 마감된 개별 공고 제거, 실시간 목록 페이지 위주로 재정리</b></span>
+  <span>부정기 수동 갱신</span>
+</div>
+
+<main>
+
+  <h2 class="section-title">🏢 연구기관·공기업 채용</h2>
+  <p class="section-sub">정부출연연구기관·지방연구원·공사의 채용 공고 페이지 — 직접 방문해 현재 공고를 확인하세요</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-krihs">KRIHS</span> 국토연구원</h2>
+        <span>채용정보</span>
+      </div>
+      <ul>
+        <li><a href="https://www.krihs.re.kr/notice/recruit.do" target="_blank" rel="noopener">
+          <span class="headline">국토연구원 <b>채용공고</b> 실시간 목록</span>
+          <span class="kr">도로·교통계획, 국토·지역계획 등 <b>연구인력</b> 공개채용 공고를 최신순으로 확인</span>
+          <time>실시간 목록</time></a></li>
+        <li><a href="https://www.krihs.re.kr/menu.es?mid=a10601010000" target="_blank" rel="noopener">
+          <span class="headline">국토연구원 <b>채용안내</b> — 전형 절차·인재상</span>
+          <span class="kr">국토연구원 채용 전형 절차 및 <b>인재상</b> 안내 페이지</span>
+          <time>상시</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-lh">LH</span> LH공사·LH토지주택연구원</h2>
+        <span>채용정보</span>
+      </div>
+      <ul>
+        <li><a href="https://lh.incruit.com/hire/hirelist.asp" target="_blank" rel="noopener">
+          <span class="headline">한국토지주택공사(LH) <b>현재 진행 중인 채용공고</b> 목록</span>
+          <span class="kr"><b>LH공사</b> 신입·경력 공채 — 실시간 공고 목록(마감된 공고는 자동으로 사라짐)</span>
+          <time>실시간 목록</time></a></li>
+        <li><a href="https://lh.incruit.com/" target="_blank" rel="noopener">
+          <span class="headline">한국토지주택공사(LH) <b>공식 채용사이트</b> 메인</span>
+          <span class="kr"><b>LH공사</b> 채용 전형절차·인재상 등 종합 안내(LH토지주택연구원 채용도 이 사이트에서 함께 공고)</span>
+          <time>상시</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-etc">기타</span> SI·AURI·GRI·KRILA</h2>
+        <span>연구기관 채용 모음</span>
+      </div>
+      <ul>
+        <li><a href="https://si.saramin.co.kr/" target="_blank" rel="noopener">
+          <span class="headline"><b>서울연구원</b> 채용공고 페이지 — 사람인 운영</span>
+          <span class="kr"><b>서울연구원</b> 석사급 연구직·정원외직원 채용 상시 공고</span>
+          <time>상시</time></a></li>
+        <li><a href="https://www.auri.re.kr/menu.es?mid=a10403020000" target="_blank" rel="noopener">
+          <span class="headline"><b>건축공간연구원(AURI)</b> 채용정보</span>
+          <span class="kr"><b>건축공간연구원</b> 연구직(박사급) 채용 — 서류·필기·논문발표 전형</span>
+          <time>상시</time></a></li>
+        <li><a href="https://recruit.incruit.com/gri/" target="_blank" rel="noopener">
+          <span class="headline"><b>경기연구원(GRI)</b> 채용홈페이지</span>
+          <span class="kr"><b>경기연구원</b> 계약직 연구인력·행정원 채용 — 인크루트 운영</span>
+          <time>상시</time></a></li>
+        <li><a href="https://krila.re.kr/bbs/board.php?bo_table=sub02_01_01&sca=%EC%B1%84%EC%9A%A9" target="_blank" rel="noopener">
+          <span class="headline"><b>한국지방행정연구원(KRILA)</b> 채용 공지 게시판 — 채용 카테고리 전체글</span>
+          <span class="kr"><b>한국지방행정연구원</b> 채용 공지만 모아보는 게시판(최신순 정렬)</span>
+          <time>실시간 목록</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">🏛 설계사무소·건축업계 채용</h2>
+  <p class="section-sub">건축사사무소·설계펌 채용 페이지와 연구인력 채용 통합 사이트</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-jl">정림</span> 정림건축</h2>
+        <span>채용정보</span>
+      </div>
+      <ul>
+        <li><a href="https://junglim.recruiter.co.kr/app/jobnotice/list" target="_blank" rel="noopener">
+          <span class="headline"><b>정림건축종합건축사사무소</b> 채용공고 목록</span>
+          <span class="kr">인천공항·상암월드컵경기장·코엑스 설계 <b>정림건축</b> 신입·경력 채용</span>
+          <time>상시 확인</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-hr">희림</span> 희림종합건축사사무소</h2>
+        <span>채용정보</span>
+      </div>
+      <ul>
+        <li><a href="https://www.catch.co.kr/Comp/RecruitInfo/283649" target="_blank" rel="noopener">
+          <span class="headline"><b>희림종합건축사사무소</b> 2026년 진행 중 채용공고</span>
+          <span class="kr">1989년 설립 <b>희림</b> — 건축/설계/인테리어, 토목/조경/도시 직무 경력직 중심 채용</span>
+          <time>2026 상시 확인</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-hb">HB</span> 하이브레인넷</h2>
+        <span>연구인력 채용 모음</span>
+      </div>
+      <ul>
+        <li><a href="https://www.hibrain.net/recruitment" target="_blank" rel="noopener">
+          <span class="headline"><b>하이브레인넷</b> 채용정보 메인 — 교수·연구원·Post-Doc 전체</span>
+          <span class="kr">석박사급 <b>연구인력 채용정보</b> 최대 규모 사이트</span>
+          <time>상시</time></a></li>
+        <li><a href="https://m.hibrain.net/recruitment/categories/COMP/categories/GOVLAB/recruits" target="_blank" rel="noopener">
+          <span class="headline">하이브레인넷 — <b>정출연/국·공립연구소</b> 채용 카테고리</span>
+          <span class="kr">국토연구원·건축공간연구원 등 <b>정부출연연구기관</b> 채용만 모아보기</span>
+          <time>상시</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">🏆 도시·데이터 공모전</h2>
+  <p class="section-sub">국토교통부·서울시 주관 공모전과 위비티 공모전 포털 — 도시계획·건축·데이터 분야</p>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-data">데이터</span> 국토교통 데이터 공모전</h2>
+        <span>국토교통부·유관기관</span>
+      </div>
+      <ul>
+        <li><a href="https://www.data.go.kr/suc/preliminaryRound.do" target="_blank" rel="noopener">
+          <span class="headline">공공데이터포털 — <b>공공데이터 활용 경진대회</b> 목록(현재 진행·예정)</span>
+          <span class="kr">전 부처 <b>공공데이터 공모전</b>을 한 곳에서 모아보는 공식 포털 — 접수기간 자동 표시</span>
+          <time>실시간 목록</time></a></li>
+        <li><a href="https://data.ex.co.kr/portal/hangAnBuPopup" target="_blank" rel="noopener">
+          <span class="headline"><b>국토교통 데이터 활용 경진대회</b> 공식 페이지(한국도로공사 등 공동주관)</span>
+          <span class="kr">매년 상반기 공고되는 <b>국토·교통 데이터+AI</b> 경진대회 — 다음 회차 공고 확인</span>
+          <time>연 1회, 접수기간은 페이지에서 확인</time></a></li>
+        <li><a href="https://smartcity.go.kr/%EC%86%8C%EC%8B%9D/" target="_blank" rel="noopener">
+          <span class="headline">스마트시티 종합포털 — <b>소식·행사</b> 전체 목록</span>
+          <span class="kr">국토교통기술대전 등 <b>국토교통 R&amp;D·스마트시티 행사</b> 공지를 최신순으로 확인</span>
+          <time>실시간 목록</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-seoul">서울시</span> 서울시 건축·도시공간 공모전</h2>
+        <span>서울시</span>
+      </div>
+      <ul>
+        <li><a href="https://project.seoul.go.kr/view/viewListCptt.do" target="_blank" rel="noopener">
+          <span class="headline">서울시 <b>설계공모 홈페이지</b> — 진행 중인 전체 공모 목록</span>
+          <span class="kr">서울시 공공건축 <b>설계공모</b> 전체 목록·참가등록·작품접수(마감된 공모는 자동으로 목록에서 빠짐)</span>
+          <time>실시간 목록</time></a></li>
+        <li><a href="https://archiculture.seoul.go.kr/" target="_blank" rel="noopener">
+          <span class="headline">서울시 <b>건축문화포털</b> — 서울특별시 건축상 등 건축 공모 공지</span>
+          <span class="kr"><b>서울특별시 건축상</b>은 매년 5~6월경 공고 — 이 포털에서 최신 공고 시기 확인</span>
+          <time>상시</time></a></li>
+        <li><a href="https://mediahub.seoul.go.kr/competition/competitionList.do" target="_blank" rel="noopener">
+          <span class="headline">서울시 <b>공모전</b> 게시판 — 전체 부서·분야 공모전 목록</span>
+          <span class="kr">서울시 전 부서가 올리는 <b>공모전 공고</b>를 최신순으로 모아보는 공식 게시판</span>
+          <time>실시간 목록</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-wev">위비티</span> Wevity 공모전 포털</h2>
+        <span>건축/건설/인테리어</span>
+      </div>
+      <ul>
+        <li><a href="https://www.wevity.com/index_university.php?c=find&s=_university&gub=1&cidx=24&gbn=list&gp=4" target="_blank" rel="noopener">
+          <span class="headline">위비티 — <b>건축/건설/인테리어</b> 공모전 카테고리 전체</span>
+          <span class="kr"><b>위비티(Wevity)</b> 건축 관련 대학생·일반 공모전 실시간 모음</span>
+          <time>상시</time></a></li>
+        <li><a href="https://www.wevity.com/" target="_blank" rel="noopener">
+          <span class="headline">위비티 — <b>공모전·대외활동</b> 통합 검색 메인</span>
+          <span class="kr">전체 분야 <b>공모전·콘테스트</b> 포털 메인 페이지</span>
+          <time>상시</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <p><b>안내:</b> 이 페이지는 각 기관·기업의 공식 채용 페이지, 채용 플랫폼(잡코리아·인크루트·사람인·캐치), 하이브레인넷, 위비티(Wevity), 서울시 공모전 게시판 등 <b>실시간으로 갱신되는 목록 페이지</b> 위주로 링크를 구성했습니다 — 특정 회차·특정 공고의 개별 URL은 마감되면 오래된 정보처럼 보일 수 있어 의도적으로 배제했습니다. 다만 사이트 구조상 목록이 아닌 특정 공고 페이지로 연결되는 일부 링크(예: 희림종합건축사사무소)는 방문 시점에 실제로 진행 중인 채용인지 다시 한번 확인하세요.</p>
+</footer>
+
+</body>
+</html>
