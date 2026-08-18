@@ -57,8 +57,14 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
+.grid-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
 @media (max-width: 760px) {
   .grid { grid-template-columns: 1fr; }
+  .grid-flex { grid-template-columns: 1fr; }
   main { padding: 16px 16px 32px; }
 }
 .card {
@@ -114,6 +120,10 @@ main {
 .badge-childlib { background: #059669; color: #fff; }
 .badge-seoullib { background: #0369a1; color: #fff; }
 .badge-edu { background: #9333ea; color: #fff; }
+.badge-nowon { background: #ea580c; color: #fff; }
+.badge-sb { background: #0f766e; color: #fff; }
+.badge-jn { background: #4d7c0f; color: #fff; }
+.badge-jongno { background: #7c3aed; color: #fff; }
 .badge {
   font-size: 10.5px;
   font-weight: 700;
@@ -149,7 +159,7 @@ footer b { color: #5b6478; }
 </div>
 
 <div class="updated-bar">
-  <span>마지막 업데이트: <b id="updated-time">2026-08-18 16:10 (KST) — 3개 기관 홈페이지 직접 확인, 개별 전시·프로그램·날짜 반영</b></span>
+  <span>마지막 업데이트: <b id="updated-time">2026-08-18 18:00 (KST) — 노원·성북·중랑·종로구 문화재단 직접 확인해 구청 행사 섹션 신설</b></span>
   <span>부정기 수동 갱신</span>
 </div>
 
@@ -285,6 +295,72 @@ footer b { color: #5b6478; }
           <span class="headline">서울도서관 — <b>독서문화 프로그램</b> 및 어린이·가족 프로그램 안내</span>
           <span class="kr">서울시 대표도서관, <b>가족 단위 독서·문화 프로그램</b> 상시 운영</span>
           <time>상시</time></a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">🏘 우리 동네 구청 행사 — 노원·성북·중랑·종로</h2>
+  <p class="section-sub">동북권 자치구(노원·성북·중랑)와 도심 종로구의 구립 문화재단이 직접 운영하는 유아·어린이 행사 — 각 재단 홈페이지 직접 확인</p>
+  <div class="grid-flex">
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-nowon">노원</span> 노원문화재단</h2>
+        <span>노원어린이극장</span>
+      </div>
+      <ul>
+        <li><a href="https://www.nowonarts.kr/channels/performance/programs/1052" target="_blank" rel="noopener">
+          <span class="headline">어린이뮤지컬 <b>"콧구멍을 후비면"</b> — 24개월 이상, 전석 40,000원</span>
+          <span class="kr">노원어린이극장 기획공연 · 노원발레페스티벌(8.21~8.30) <b>"한여름밤의 호두까기인형"</b>(6세 이상)도 8/28~29 동시 진행</span>
+          <time>2026.9.12(토) ~ 9.13(일)</time></a></li>
+        <li><a href="https://www.nowonarts.kr/channels/performance/programs" target="_blank" rel="noopener">
+          <span class="headline">노원문화재단 <b>전체 공연 목록</b></span>
+          <span class="kr">노원어린이극장·노원문화예술회관 공연 실시간 목록</span>
+          <time>실시간 목록</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-sb">성북</span> 성북문화재단</h2>
+        <span>꿈빛극장·문화프로그램</span>
+      </div>
+      <ul>
+        <li><a href="https://www.sbculture.or.kr/culture/bbs/BMSR00005/list.do?menuNo=500144" target="_blank" rel="noopener">
+          <span class="headline">⭐ 오늘(8/18) 확인 — <b>"2026 성북축제학교[지음·이음·다음]"</b> 참여자 모집 중(~8.30)</span>
+          <span class="kr">성북 책모꼬지 북페스티벌(9.6, 가족 대상)도 예정 · 꿈빛극장·성북구민회관 등 750여 건 프로그램 실시간 목록</span>
+          <time>실시간 목록 · 8/18 확인</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-jn">중랑</span> 중랑구 물놀이 시설</h2>
+        <span>여름 한정 운영</span>
+      </div>
+      <ul>
+        <li><a href="https://www.jungnang.go.kr/" target="_blank" rel="noopener">
+          <span class="headline">⚠️ 용마폭포공원·서울중랑워터파크·봉수대공원은 이미 종료 — <b>중랑캠핑숲 어린이 물놀이터</b>(~8.30), <b>우리동네 바닥분수</b>(~8.31)는 계속 운영 중</span>
+          <span class="kr">중랑구청 홈페이지 상단 배너에서 <b>물놀이장별 실시간 운영 현황</b> 확인 가능(유아는 보호자 동반 필수)</span>
+          <time>8/18 확인 · 시설별 종료일 상이</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-jongno">종로</span> 종로문화재단</h2>
+        <span>종로 아이들극장</span>
+      </div>
+      <ul>
+        <li><a href="https://www.jfac.or.kr/site/child/childProgram/view?pgIdx=363&pgCatCode=" target="_blank" rel="noopener">
+          <span class="headline">뮤지컬 <b>"드라랄라 치과"</b> — 24개월 이상, 66,000원, 지금 공연 중</span>
+          <span class="kr">화~금·일 11:00·14:00(2회), 토 11:00·14:00·16:30(3회), 월 공연없음 — 회차 상세는 날짜별로 다름</span>
+          <time>2026.8.7 ~ 8.30</time></a></li>
+        <li><a href="https://www.jfac.or.kr/site/child/childProgram/list" target="_blank" rel="noopener">
+          <span class="headline">종로 아이들극장 <b>전체 프로그램 목록</b></span>
+          <span class="kr">9월 연극 "쌀알의 노래", 10~11월 종로 가족공연축제 등 예정작도 함께 확인</span>
+          <time>실시간 목록</time></a></li>
       </ul>
     </div>
 
