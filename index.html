@@ -2,7 +2,7 @@
 {
   "name": "World News Headlines",
   "schemaVersion": 1,
-  "description": "BBC, CNN, Al Jazeera의 오늘자 주요 헤드라인을 모은 페이지. 매일 오전 7시 스케줄 작업으로 내용이 갱신됩니다."
+  "description": "해외 매체 18곳(일반·경제·국제기구)의 주요 헤드라인을 모은 페이지. 매일 오전 5시 스케줄 작업으로 내용이 갱신됩니다."
 }
 </script>
 <html lang="ko">
@@ -98,6 +98,21 @@ main {
   .kr { font-size: 14px; }
   .card li time { font-size: 12.5px; }
 }
+.card details > ul { list-style: none; margin: 0; padding: 0; }
+.card details summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 18px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1d4ed8;
+  border-top: 1px solid #eef1f6;
+  user-select: none;
+}
+.card details summary::-webkit-details-marker { display: none; }
+.card details summary:hover { background: #f5f8ff; }
+.card details[open] .more-closed-label { display: none; }
+.card details:not([open]) .more-open-label { display: none; }
 .badge-bbc { background: #bb1919; color: #fff; }
 .badge-cnn { background: #cc0000; color: #fff; }
 .badge-aj { background: #fa9000; color: #fff; }
@@ -159,10 +174,9 @@ footer b { color: #5b6478; }
 </div>
 
 <div class="updated-bar">
-  <span>마지막 업데이트(실제 기사 재수집): <b id="updated-time">2026-09-27 11:52 (KST)</b></span>
+  <span>마지막 업데이트(실제 기사 재수집): <b id="updated-time">일부 소스 갱신 실패(BBC), 2026-09-28 05:14 (KST) 기준 부분 갱신</b></span>
   <span>다음 자동 갱신: 매일 오전 5시</span>
 </div>
-
 
 <main>
 
@@ -171,29 +185,203 @@ footer b { color: #5b6478; }
 
     <div class="card">
       <div class="card-head">
+        <h2><span class="badge badge-cnn">CNN</span> CNN World</h2>
+        <span>World</span>
+      </div>
+      <ul>
+        <li><a href="https://www.cnn.com/2026/09/27/uk/fairford-arrests-uk-raf-us-intl" target="_blank" rel="noopener">
+          <span class="headline">UK police arrest five men on suspicion of <b>terror offenses</b> near air base used by US forces</span>
+          <span class="kr">英 경찰, 미군 사용 공군기지 인근서 <b>테러 혐의</b>로 남성 5명 체포</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.cnn.com/2026/09/27/africa/south-africa-shooting-tavern-intl-hnk" target="_blank" rel="noopener">
+          <span class="headline"><b>South Africa</b> police hunt suspects after twin shootings leave nearly 30 people dead</span>
+          <span class="kr"><b>남아공</b> 경찰, 30명 가까이 숨진 연쇄 총격 용의자 추적</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.cnn.com/2026/09/27/science/spacex-starship-orbital-launch" target="_blank" rel="noopener">
+          <span class="headline">The most powerful rocket ever built is on the verge of its biggest — and riskiest — test yet</span>
+          <span class="kr">사상 최강 로켓 <b>스타십</b>, 가장 크고 위험한 시험 앞둬</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.cnn.com/2026/09/26/weather/live-news/noreaster-weekend-storm" target="_blank" rel="noopener">
+          <span class="headline">Powerful <b>nor'easter</b> lashes East Coast with rain, flooding and wind</span>
+          <span class="kr">강력한 <b>노리스터</b>, 美 동부 해안에 폭우·홍수·강풍</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.cnn.com/2026/09/26/tech/openai-agents-rogue-government-websites" target="_blank" rel="noopener">
+          <span class="headline">Rogue <b>OpenAI agents</b> targeted three separate US government websites</span>
+          <span class="kr">통제 벗어난 <b>OpenAI 에이전트</b>, 美 정부 웹사이트 3곳 겨냥</span>
+          <time>9월 26일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-aj">AJ</span> Al Jazeera</h2>
+        <span>News</span>
+      </div>
+      <ul>
+        <li><a href="https://www.aljazeera.com/news/2026/9/27/better-deal-whats-behind-trumps-rejection-of-irans-truce-offer" target="_blank" rel="noopener">
+          <span class="headline">'Better deal': What's behind <b>Trump's rejection</b> of Iran's truce offer?</span>
+          <span class="kr">"더 나은 거래" — <b>트럼프</b>가 이란 휴전 제안을 <b>거부</b>한 배경은?</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.aljazeera.com/news/2026/9/27/yemen-government-forces-widen-attacks-against-houthis-what-we-know" target="_blank" rel="noopener">
+          <span class="headline"><b>Yemen</b> government forces widen attacks against Houthis: What we know</span>
+          <span class="kr"><b>예멘</b> 정부군, 후티 반군 공세 확대 — 알려진 사실</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.aljazeera.com/news/2026/9/27/afghanistan-says-28-fighters-killed-as-islamabad-kabul-trade-accusations" target="_blank" rel="noopener">
+          <span class="headline"><b>Afghanistan</b> says 28 fighters killed as Islamabad, Kabul trade accusations</span>
+          <span class="kr"><b>아프간</b> "무장대원 28명 사살" — 파키스탄과 상호 비난</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.aljazeera.com/news/2026/9/27/ethiopias-army-promises-restraint-amid-fears-of-new-civil-war" target="_blank" rel="noopener">
+          <span class="headline"><b>Ethiopia's</b> army promises restraint amid fears of new civil war</span>
+          <span class="kr"><b>에티오피아</b> 군 "자제하겠다" — 새 내전 우려 확산</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.aljazeera.com/news/2026/9/27/german-russian-foreign-ministers-hold-rare-talks-amid-rising-tensions" target="_blank" rel="noopener">
+          <span class="headline"><b>German, Russian</b> foreign ministers hold rare talks amid rising tensions</span>
+          <span class="kr"><b>독일·러시아</b> 외무장관, 긴장 고조 속 이례적 회담</span>
+          <time>9월 27일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-npr">NPR</span> NPR News</h2>
+        <span>US · World</span>
+      </div>
+      <ul>
+        <li><a href="https://www.npr.org/2026/09/27/nx-s1-5982488/south-africa-mass-shootings-killed-38-week" target="_blank" rel="noopener">
+          <span class="headline"><b>South Africa</b> reels from spate of mass shootings that killed 38 people in a week</span>
+          <span class="kr"><b>남아공</b>, 일주일 새 38명 숨진 잇단 총기 난사에 충격</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.npr.org/2026/09/27/nx-s1-5982480/multiple-arrests-suspicion-explosives-offenses-uk-base-us-forces" target="_blank" rel="noopener">
+          <span class="headline">5 arrested near a U.K. air base used by U.S. on suspicion of preparing a <b>terrorist act</b></span>
+          <span class="kr">美군 사용 英 공군기지 인근서 <b>테러</b> 준비 혐의로 5명 체포</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.npr.org/2026/09/26/g-s1-144667/hiv-crystal-meth-epidemic-fiji" target="_blank" rel="noopener">
+          <span class="headline">Why this island paradise has the world's fastest-growing <b>HIV</b> epidemic</span>
+          <span class="kr">낙원의 섬 <b>피지</b>, 왜 세계에서 가장 빠른 <b>HIV</b> 확산을 겪나</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.npr.org/2026/09/25/g-s1-144948/pandemic-prevention-treaty-agreement-world-health-organization" target="_blank" rel="noopener">
+          <span class="headline">There's a global <b>pandemic treaty</b> that's signed — and in 'limbo.' What's the holdup?</span>
+          <span class="kr">서명은 됐지만 '표류' 중인 <b>팬데믹 조약</b> — 무엇이 걸림돌인가</span>
+          <time>9월 25일</time></a></li>
+        <li><a href="https://www.npr.org/2026/09/18/nx-s1-5973822/south-africa-feels-like-a-prison-for-women-amid-spate-of-femicides" target="_blank" rel="noopener">
+          <span class="headline">South Africa 'feels like a prison' for women amid spate of <b>femicides</b></span>
+          <span class="kr">잇단 <b>여성 살해</b>에 "남아공은 여성에게 감옥 같다"</span>
+          <time>9월 18일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-jt">JT</span> The Japan Times</h2>
+        <span>Japan · World</span>
+      </div>
+      <ul>
+        <li><a href="https://www.japantimes.co.jp/news/2026/09/27/asia-pacific/politics/trump-china-xi-taiwan-understands/" target="_blank" rel="noopener">
+          <span class="headline">After U.S.-China summit, Trump says <b>Xi</b> 'understands' his position on <b>Taiwan</b></span>
+          <span class="kr">미중 정상회담 후 트럼프 "<b>시진핑</b>, <b>대만</b> 문제 내 입장 이해해"</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.japantimes.co.jp/news/2026/09/27/asia-pacific/china-us-pandas/" target="_blank" rel="noopener">
+          <span class="headline">China sends two <b>giant pandas</b> to U.S.</span>
+          <span class="kr">중국, 미국에 <b>자이언트 판다</b> 2마리 보내</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.japantimes.co.jp/news/2026/09/27/japan/chinese-research-ship-japans-eez/" target="_blank" rel="noopener">
+          <span class="headline">Chinese <b>research ship</b> spotted in Japan's EEZ</span>
+          <span class="kr">중국 <b>해양조사선</b>, 일본 EEZ 내에서 포착</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.japantimes.co.jp/news/2026/09/27/asia-pacific/bangkok-floods-shelters/" target="_blank" rel="noopener">
+          <span class="headline"><b>Bangkok floods</b> force thousands into shelters</span>
+          <span class="kr"><b>방콕 홍수</b>로 수천 명 대피소 피신</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.japantimes.co.jp/business/2026/09/26/markets/japan-yen-rises-us/" target="_blank" rel="noopener">
+          <span class="headline"><b>Yen</b> rises as Japanese officials say weak currency is problem</span>
+          <span class="kr">日 당국 "약세 통화는 문제" 발언에 <b>엔화</b> 상승</span>
+          <time>9월 26일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
         <h2><span class="badge badge-kh">KH</span> Korea Herald</h2>
         <span>Korea</span>
       </div>
       <ul>
-        <li><a href="https://www.koreaherald.com/article/10885049" target="_blank" rel="noopener">
-          <span class="headline"><b>Lee</b> heads home after wrapping up state visit to <b>Mexico</b></span>
-          <span class="kr"><b>이재명</b> 대통령, <b>멕시코</b> 국빈방문 마치고 귀국길</span>
+        <li><a href="https://www.koreaherald.com/article/10885242" target="_blank" rel="noopener">
+          <span class="headline"><b>Kakao Pay Insurance</b> bucks digital insurer retreat</span>
+          <span class="kr"><b>카카오페이손보</b>, 디지털 보험사 줄철수 속 '역주행' 성장</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.koreaherald.com/article/10885206" target="_blank" rel="noopener">
+          <span class="headline">Lee Byung-hun, Ha Ye-rin lend voices to <b>British Museum's</b> 'Korea' exhibition</span>
+          <span class="kr">이병헌·하예린, <b>대영박물관</b> '한국' 특별전 오디오 가이드 참여</span>
           <time>9월 27일</time></a></li>
         <li><a href="https://www.koreaherald.com/article/10884855" target="_blank" rel="noopener">
           <span class="headline">Highways congested on <b>Chuseok</b> holiday as people return home</span>
-          <span class="kr"><b>추석</b> 연휴 귀경 행렬로 고속도로 곳곳 정체</span>
+          <span class="kr"><b>추석</b> 연휴 귀경 행렬로 고속도로 정체</span>
           <time>9월 26일</time></a></li>
-        <li><a href="https://www.koreaherald.com/article/10884823" target="_blank" rel="noopener">
-          <span class="headline"><b>Kyiv</b> denies Seoul's claim of consensus to keep North Korean <b>POW</b> transfer confidential</span>
-          <span class="kr"><b>우크라이나</b>, 北 <b>포로</b> 이송 비공개 합의 있었다는 韓 주장 부인</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.koreaherald.com/article/10884614" target="_blank" rel="noopener">
-          <span class="headline">Lee says <b>Ukraine</b> disclosed transfer of 2 North Korean soldiers in breach of non-disclosure agreement</span>
-          <span class="kr">이 대통령 "<b>우크라이나</b>, 비공개 합의 어기고 北군인 2명 이송 공개"</span>
-          <time>9월 25일</time></a></li>
+        <li><a href="https://www.koreaherald.com/article/10884243" target="_blank" rel="noopener">
+          <span class="headline"><b>N. Korea</b> touts upgraded rocket system, urges stronger firepower along border</span>
+          <span class="kr"><b>북한</b>, 개량형 방사포 시험 과시 — 접경 화력 강화 촉구</span>
+          <time>9월 24일</time></a></li>
         <li><a href="https://www.koreaherald.com/article/10884141" target="_blank" rel="noopener">
           <span class="headline">2 N. Korean <b>POWs</b> arrived in S. Korea 'several days ago': lawmaker</span>
-          <span class="kr">의원 "北 <b>포로</b> 2명, 며칠 전 이미 한국 도착"</span>
+          <span class="kr">의원 "북한군 <b>포로</b> 2명, 며칠 전 한국 도착"</span>
+          <time>9월 24일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-scmp">SCMP</span> South China Morning Post</h2>
+        <span>Asia</span>
+      </div>
+      <ul>
+        <li><a href="https://www.scmp.com/news/china/diplomacy/article/3368921/amid-many-thorny-issues-china-trump-pushes-rename-ai-superintelligence" target="_blank" rel="noopener">
+          <span class="headline">Amid many thorny issues with China, Trump pushes to rename AI as <b>'superintelligence'</b></span>
+          <span class="kr">대중 난제 속 트럼프, AI 명칭을 <b>'초지능'</b>으로 바꾸자고 제안</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.scmp.com/news/hong-kong/education/article/3368902/australia-just-changed-its-visa-rules-so-what-about-its-bespoke-hong-kong-pathway" target="_blank" rel="noopener">
+          <span class="headline"><b>Australia</b> just changed its visa rules. So what about its bespoke Hong Kong pathway?</span>
+          <span class="kr"><b>호주</b> 비자 규정 변경 — 홍콩인 전용 이민 경로는 어떻게 되나</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.scmp.com/news/china/diplomacy/article/3368870/trade-deliverables-taiwan-push-and-strategic-stability-key-xi-trump-takeaways-overall" target="_blank" rel="noopener">
+          <span class="headline">Trade deliverables, Taiwan push and 'strategic stability': key <b>Xi-Trump</b> takeaways</span>
+          <span class="kr">무역 성과·대만 압박·'전략적 안정' — <b>시진핑-트럼프</b> 회담 핵심 정리</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.scmp.com/news/china/diplomacy/article/3368858/last-day-xis-us-visit-begins-trump-white-house-tea" target="_blank" rel="noopener">
+          <span class="headline"><b>Xi</b> ends 3-day Trump visit with promise to meet again in November in China</span>
+          <span class="kr"><b>시진핑</b>, 3일 방미 마무리 — 11월 중국서 재회 약속</span>
+          <time>9월 25일</time></a></li>
+        <li><a href="https://www.scmp.com/news/china/politics/article/3368839/trumps-warm-welcome-xi-met-caution-and-uncertainty-taiwan" target="_blank" rel="noopener">
+          <span class="headline">Trump's warm welcome for Xi met with caution and uncertainty in <b>Taiwan</b></span>
+          <span class="kr">트럼프의 시진핑 환대에 <b>대만</b>은 경계·불안</span>
+          <time>9월 25일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-f24">F24</span> France 24</h2>
+        <span>World</span>
+      </div>
+      <ul>
+        <li><a href="https://www.france24.com/en/europe/20260927-serbian-president-aleksandar-vucic-resigns-expected-to-run-for-prime-minister" target="_blank" rel="noopener">
+          <span class="headline">Serbian President <b>Aleksandar Vucic</b> resigns to run for prime minister in October elections</span>
+          <span class="kr">세르비아 <b>부치치</b> 대통령 사임 — 10월 총선서 총리 도전</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.france24.com/en/video/20260927-pope-leo-continues-his-visit-to-france-in-lourdes" target="_blank" rel="noopener">
+          <span class="headline"><b>Pope Leo</b> continues his visit to France in Lourdes</span>
+          <span class="kr"><b>레오 14세 교황</b>, 루르드서 프랑스 방문 일정 이어가</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.france24.com/en/france/20260926-pope-leo-xiv-celebrates-open-air-mass-in-front-of-800-000-people-in-central-paris" target="_blank" rel="noopener">
+          <span class="headline">Pope Leo XIV celebrates open-air <b>Mass</b> in front of 800,000 people in central Paris</span>
+          <span class="kr">레오 14세 교황, 파리 도심서 80만 명 앞 야외 <b>미사</b> 집전</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.france24.com/en/france/20260926-pope-visits-lourdes-after-giant-paris-mass-to-meet-clergy-abuse-victims" target="_blank" rel="noopener">
+          <span class="headline">Pope visits Lourdes after Paris mass to meet <b>clergy sexual abuse victims</b></span>
+          <span class="kr">교황, 파리 미사 후 루르드서 <b>성직자 성학대 피해자</b> 면담</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.france24.com/en/europe/20260924-schism-ultra-conservative-rebel-sect-sspx-pope-leo-visit-france-catholics-lourdes" target="_blank" rel="noopener">
+          <span class="headline"><b>Schism</b> with rebel Catholic sect casts a pall over Pope Leo's visit to France</span>
+          <span class="kr">가톨릭 이탈 분파와의 <b>분열</b>, 교황 방불에 그림자</span>
           <time>9월 24일</time></a></li>
       </ul>
     </div>
@@ -204,209 +392,55 @@ footer b { color: #5b6478; }
         <span>Korea</span>
       </div>
       <ul>
-        <li><a href="https://www.koreatimes.co.kr/southkorea/politics/20260927/lee-heads-home-after-wrapping-up-state-visit-to-mexico" target="_blank" rel="noopener">
-          <span class="headline">Lee heads home after wrapping up <b>state visit to Mexico</b></span>
-          <span class="kr">이 대통령, <b>멕시코 국빈방문</b> 마치고 귀국</span>
-          <time>9월 27일</time></a></li>
-        <li><a href="https://www.koreatimes.co.kr/amp/foreignaffairs/20260926/lee-calls-for-resumption-of-fta-negotiations-with-mexico-to-elevate-economic-cooperation" target="_blank" rel="noopener">
-          <span class="headline">Lee calls for resumption of <b>FTA negotiations</b> with Mexico to elevate economic cooperation</span>
-          <span class="kr">이 대통령, 경제협력 격상 위해 멕시코와 <b>FTA 협상</b> 재개 촉구</span>
+        <li><a href="https://www.koreatimes.co.kr/foreignaffairs/20260926/seoul-kyiv-clash-over-confidentiality-as-n-korean-pow-repatriation-goes-public" target="_blank" rel="noopener">
+          <span class="headline">Seoul, Kyiv clash over <b>confidentiality</b> as N. Korean POW repatriation goes public</span>
+          <span class="kr">북한군 포로 송환 공개되자 한-우크라 <b>비공개 합의</b> 두고 공방</span>
           <time>9월 26일</time></a></li>
-        <li><a href="https://www.koreatimes.co.kr/southkorea/20260925/lee-reaffirms-he-will-not-seek-reelection-through-constitutional-revision" target="_blank" rel="noopener">
-          <span class="headline">Lee reaffirms he will not seek <b>reelection</b> through constitutional revision</span>
-          <span class="kr">이 대통령 "개헌 통한 <b>연임</b> 추진 않겠다" 재확인</span>
+        <li><a href="https://www.koreatimes.co.kr/sports/20260926/s-korea-wins-womens-basketball-gold-medal" target="_blank" rel="noopener">
+          <span class="headline">S. Korea wins <b>women's basketball</b> gold medal</span>
+          <span class="kr">한국 <b>여자농구</b>, 아시안게임 금메달</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.koreatimes.co.kr/foreignaffairs/northkorea/20260926/s-korea-again-highlights-humanitarian-handling-of-nk-pows" target="_blank" rel="noopener">
+          <span class="headline">S. Korea again highlights <b>humanitarian</b> handling of NK POWs</span>
+          <span class="kr">정부, 북한군 포로 <b>인도주의적</b> 처리 재차 강조</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.koreatimes.co.kr/southkorea/politics/20260925/parties-clash-over-secret-repatriation-of-north-korean-pows-from-ukraine" target="_blank" rel="noopener">
+          <span class="headline">Parties clash over <b>secret repatriation</b> of North Korean POWs from Ukraine</span>
+          <span class="kr">여야, 북한군 포로 <b>비밀 송환</b> 두고 충돌</span>
           <time>9월 25일</time></a></li>
-        <li><a href="https://www.koreatimes.co.kr/world/20260923/lee-vows-efforts-to-help-swiftly-resume-us-n-korea-dialogue" target="_blank" rel="noopener">
-          <span class="headline">Lee vows efforts to help swiftly resume <b>US-N. Korea dialogue</b></span>
-          <span class="kr">이 대통령, <b>북미 대화</b> 조속 재개 위해 노력 다짐</span>
-          <time>9월 23일</time></a></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-head">
-        <h2><span class="badge badge-jt">JT</span> The Japan Times</h2>
-        <span>Japan · World</span>
-      </div>
-      <ul>
-        <li><a href="https://www.japantimes.co.jp/news/2026/09/27/japan/politics/us-japan-takaichi-trump-china/" target="_blank" rel="noopener">
-          <span class="headline"><b>Takaichi</b> says Trump gave her 'detailed' briefing on U.S.-China summit</span>
-          <span class="kr"><b>다카이치</b> "트럼프가 美中 정상회담 '상세히' 설명해줘"</span>
-          <time>9월 27일</time></a></li>
-        <li><a href="https://www.japantimes.co.jp/news/2026/09/27/asia-pacific/politics/trump-china-xi-taiwan-understands/" target="_blank" rel="noopener">
-          <span class="headline">After U.S.-China summit, Trump says Xi 'understands' his position on <b>Taiwan</b></span>
-          <span class="kr">美中 정상회담 후 트럼프 "시진핑, <b>대만</b> 관련 내 입장 이해"</span>
-          <time>9월 27일</time></a></li>
-        <li><a href="https://www.japantimes.co.jp/news/2026/09/27/japan/politics/japan-ldp-money-politics-worries/" target="_blank" rel="noopener">
-          <span class="headline">Japan's <b>LDP</b> worried about fresh attention to money issue</span>
-          <span class="kr">日 <b>자민당</b>, 정치자금 문제 재부각 우려</span>
-          <time>9월 27일</time></a></li>
-        <li><a href="https://www.japantimes.co.jp/news/2026/09/27/japan/japan-chiba-heavy-rain-damage-farming/" target="_blank" rel="noopener">
-          <span class="headline"><b>Heavy rain</b> deals blow to fish and rice farmers in Chiba Prefecture</span>
-          <span class="kr"><b>폭우</b>로 지바현 양식어민·벼농가 큰 타격</span>
-          <time>9월 27일</time></a></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-head">
-        <h2><span class="badge badge-scmp">SCMP</span> South China Morning Post</h2>
-        <span>Asia</span>
-      </div>
-      <ul>
-        <li><a href="https://www.scmp.com/news/world/middle-east/article/3368917/trump-rejects-iran-proposal-deal-reopen-hormuz" target="_blank" rel="noopener">
-          <span class="headline">Trump rejects <b>Iran</b> proposal for deal to reopen <b>Hormuz</b></span>
-          <span class="kr">트럼프, <b>호르무즈</b> 재개방 위한 <b>이란</b> 합의안 거부</span>
-          <time>9월 27일</time></a></li>
-        <li><a href="https://www.scmp.com/week-asia/health-environment/article/3368898/thailands-bangkok-declares-flood-disaster-across-city-thousands-flee-homes" target="_blank" rel="noopener">
-          <span class="headline">Thailand's <b>Bangkok</b> declares <b>flood disaster</b> across city as thousands flee from homes</span>
-          <span class="kr">태국 <b>방콕</b>, 도시 전역 <b>홍수 재난</b> 선포 — 수천 명 대피</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.scmp.com/news/china/diplomacy/article/3368870/trade-deliverables-taiwan-push-and-strategic-stability-key-xi-trump-takeaways-overall" target="_blank" rel="noopener">
-          <span class="headline">Trade deliverables, Taiwan push and 'strategic stability': key <b>Xi-Trump</b> takeaways</span>
-          <span class="kr">무역 성과·대만 압박·'전략적 안정' — <b>시진핑-트럼프</b> 회담 핵심 정리</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.scmp.com/news/china/politics/article/3368839/trumps-warm-welcome-xi-met-caution-and-uncertainty-taiwan" target="_blank" rel="noopener">
-          <span class="headline">Trump's warm welcome for Xi met with caution and uncertainty in <b>Taiwan</b></span>
-          <span class="kr">트럼프의 시진핑 환대에 <b>대만</b>은 경계와 불안</span>
-          <time>9월 25일</time></a></li>
+        <li><a href="https://www.koreatimes.co.kr/foreignaffairs/northkorea/20260924/2-n-korean-pows-arrive-in-s-korea-after-20-months-of-captivity-in-ukraine" target="_blank" rel="noopener">
+          <span class="headline">2 N. Korean <b>POWs</b> arrive in S. Korea after 20 months of captivity in Ukraine</span>
+          <span class="kr">북한군 <b>포로</b> 2명, 우크라 억류 20개월 만에 한국 도착</span>
+          <time>9월 24일</time></a></li>
       </ul>
     </div>
 
     <div class="card">
       <div class="card-head">
         <h2><span class="badge badge-bbc">BBC</span> BBC News</h2>
-        <span>World</span>
+        <span>World · 이번 회차 수집 실패, 이전 내용 유지</span>
       </div>
       <ul>
-        <li><a href="https://www.bbc.com/news/articles/ck1wxxzn5jndo" target="_blank" rel="noopener">
-          <span class="headline"><b>Nor'easter</b> brings flooding as New York and New Jersey declare emergency</span>
-          <span class="kr"><b>노이스터</b> 폭풍 홍수에 뉴욕·뉴저지 비상사태 선포</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.bbc.com/news/articles/cq4gmmdl52rgo" target="_blank" rel="noopener">
-          <span class="headline">Mother of woman found hanging in tree shocked as police say <b>body was staged</b></span>
-          <span class="kr">나무에 매달린 채 발견된 여성 어머니, 경찰 "<b>시신 연출</b>" 발표에 충격</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.bbc.com/news/articles/cm4gjjwvvlzro" target="_blank" rel="noopener">
-          <span class="headline"><b>Pope</b> praises young people's 'energy and commitment' at huge open-air Mass in Paris</span>
-          <span class="kr"><b>교황</b>, 파리 대규모 야외미사서 청년들의 '열정과 헌신' 찬사</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.bbc.com/news/articles/cqm2mm4y5dkko" target="_blank" rel="noopener">
-          <span class="headline">German town bans <b>'stumbling stone'</b> memorials to Nazi victims</span>
-          <span class="kr">독일 소도시, 나치 희생자 추모 <b>'걸림돌'</b> 설치 금지</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.bbc.com/news/articles/c6p3kk78l4l1o" target="_blank" rel="noopener">
-          <span class="headline">British national among six dead in building <b>explosion</b> close to Acropolis in Athens</span>
-          <span class="kr">아테네 아크로폴리스 인근 건물 <b>폭발</b>로 영국인 포함 6명 사망</span>
-          <time>9월 26일</time></a></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-head">
-        <h2><span class="badge badge-cnn">CNN</span> CNN World</h2>
-        <span>World</span>
-      </div>
-      <ul>
-        <li><a href="https://www.cnn.com/2026/09/26/middleeast/trump-rejects-iran-proposal-hormuz-intl" target="_blank" rel="noopener">
-          <span class="headline">Trump rejects <b>Iran</b>'s latest proposal to reopen the <b>Strait of Hormuz</b></span>
-          <span class="kr">트럼프, <b>호르무즈 해협</b> 재개방 위한 <b>이란</b> 최신 제안 거부</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.cnn.com/2026/09/26/weather/live-news/noreaster-weekend-storm" target="_blank" rel="noopener">
-          <span class="headline">Live updates: Powerful <b>Nor'easter</b> digs in on the East Coast</span>
-          <span class="kr">속보: 강력한 <b>노이스터</b>, 美 동부 해안 강타</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.cnn.com/2026/09/26/tech/openai-agents-rogue-government-websites" target="_blank" rel="noopener">
-          <span class="headline">Rogue <b>OpenAI agents</b> targeted three separate US government websites</span>
-          <span class="kr">통제 벗어난 <b>OpenAI 에이전트</b>, 美 정부 웹사이트 3곳 겨냥</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.cnn.com/2026/09/26/us/caleb-flynn-trial-prosecution" target="_blank" rel="noopener">
-          <span class="headline">With no murder weapon, <b>Caleb Flynn</b>'s trial focuses on affair and alleged intruder</span>
-          <span class="kr">흉기 없는 <b>케일럽 플린</b> 재판, 불륜과 침입자 주장에 초점</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.cnn.com/2026/09/25/politics/white-house-blocks-cnn-air-force-one-travel-pool" target="_blank" rel="noopener">
-          <span class="headline">White House bars CNN from covering Trump on behalf of major TV networks on <b>Air Force One</b> trip</span>
-          <span class="kr">백악관, CNN의 <b>에어포스원</b> 공동취재단 동행 취재 차단</span>
-          <time>9월 25일</time></a></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-head">
-        <h2><span class="badge badge-aj">AJ</span> Al Jazeera</h2>
-        <span>News</span>
-      </div>
-      <ul>
-        <li><a href="https://www.aljazeera.com/news/2026/9/26/pezeshkian-says-iran-no-longer-trusts-talks-with-washington" target="_blank" rel="noopener">
-          <span class="headline"><b>Pezeshkian</b> says Iran 'no longer trusts talks with Washington'</span>
-          <span class="kr"><b>페제시키안</b> "이란, 더 이상 美와의 협상 신뢰하지 않아"</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.aljazeera.com/video/newsfeed/2026/9/26/girl-disabled-by-israeli-strike-urges-wheelchairs-be-let-into-gaza" target="_blank" rel="noopener">
-          <span class="headline">Girl disabled by Israeli strike urges <b>wheelchairs</b> be let into <b>Gaza</b></span>
-          <span class="kr">이스라엘 공습으로 장애 입은 소녀 "<b>가자</b>에 <b>휠체어</b> 반입 허용해달라"</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.aljazeera.com/news/2026/9/25/more-than-55000-sudanese-refugees-flee-to-chad-as-un-calls-for-funding" target="_blank" rel="noopener">
-          <span class="headline">More than 55,000 <b>Sudanese refugees</b> flee to Chad as UN calls for funding</span>
-          <span class="kr"><b>수단 난민</b> 5만5천 명 이상 차드로 탈출 — UN, 자금 지원 호소</span>
-          <time>9월 25일</time></a></li>
-        <li><a href="https://www.aljazeera.com/news/2026/9/25/saudi-turkish-pakistani-chiefs-plan-urgent-talks-amid-yemen-fighting" target="_blank" rel="noopener">
-          <span class="headline">Saudi, Turkish, Pakistani chiefs plan urgent talks amid <b>Yemen</b> fighting</span>
-          <span class="kr">사우디·튀르키예·파키스탄 군 수뇌부, <b>예멘</b> 교전 속 긴급회담</span>
-          <time>9월 25일</time></a></li>
-        <li><a href="https://www.aljazeera.com/news/2026/9/25/dr-congos-ebola-outbreak-spreads-to-two-new-health-zones-who-says" target="_blank" rel="noopener">
-          <span class="headline">DR Congo's <b>Ebola</b> outbreak spreads to two new health zones, WHO says</span>
-          <span class="kr">WHO "DR콩고 <b>에볼라</b>, 보건구역 2곳으로 추가 확산"</span>
-          <time>9월 25일</time></a></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-head">
-        <h2><span class="badge badge-npr">NPR</span> NPR News</h2>
-        <span>US · World</span>
-      </div>
-      <ul>
-        <li><a href="https://npr.org/2026/09/26/nx-s1-5981392/noreaster-pounds-mid-atlantic-new-england-coastlines-hurricane-nolo-targets-hawaii" target="_blank" rel="noopener">
-          <span class="headline">Windy weddings and rocky cruises: How East Coasters are braving the <b>nor'easter</b></span>
-          <span class="kr">강풍 속 결혼식·흔들리는 크루즈 — 美 동부 주민들의 <b>노이스터</b> 버티기</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.npr.org/2026/09/26/g-s1-145146/roads-flood-in-new-jersey" target="_blank" rel="noopener">
-          <span class="headline">Roads flood in <b>New Jersey</b>, inundate some homes, as first major signs of nor'easter take shape</span>
-          <span class="kr"><b>뉴저지</b> 도로·주택 침수 — 노이스터 본격화 조짐</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.npr.org/2026/09/26/g-s1-145150/pope-warns-a-paradise-of-machines-could-undermine-humanity" target="_blank" rel="noopener">
-          <span class="headline">Pope warns a <b>'paradise of machines'</b> could undermine humanity as he opens France trip</span>
-          <span class="kr">교황, 프랑스 방문 개막 연설서 "<b>'기계의 낙원'</b>이 인간성 훼손할 수도" 경고</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.npr.org/2026/09/26/g-s1-145142/cnn-left-off-air-force-one" target="_blank" rel="noopener">
-          <span class="headline"><b>CNN</b> left off Air Force One for Trump's upcoming trip in new media restriction</span>
-          <span class="kr">백악관 새 언론 제한 — <b>CNN</b>, 트럼프 에어포스원 동행서 배제</span>
-          <time>9월 26일</time></a></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-head">
-        <h2><span class="badge badge-f24">F24</span> France 24</h2>
-        <span>World</span>
-      </div>
-      <ul>
-        <li><a href="https://www.france24.com/en/middle-east/20260926-trump-reportedly-rejects-iran-s-7-day-plan-to-reopen-strait-of-hormuz" target="_blank" rel="noopener">
-          <span class="headline">Trump rejects Iran's <b>seven-day plan</b> to reopen Strait of Hormuz</span>
-          <span class="kr">트럼프, 호르무즈 해협 재개방 위한 이란의 <b>'7일 계획'</b> 거부</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.france24.com/en/europe/20260926-live-more-than-half-a-million-expected-at-pope-s-open-air-mass-in-paris" target="_blank" rel="noopener">
-          <span class="headline"><b>Pope Leo XIV</b> prays for France at <b>Lourdes</b> pilgrimage site</span>
-          <span class="kr"><b>레오 14세 교황</b>, <b>루르드</b> 성지서 프랑스 위해 기도</span>
-          <time>9월 26일</time></a></li>
-        <li><a href="https://www.france24.com/en/france/20260925-leo-xiv-opens-france-visit-with-paris-popemobile-ride-warnings-of-ai-threat-to-humanity" target="_blank" rel="noopener">
-          <span class="headline">Pope Leo opens France visit with warnings on <b>AI</b> and 'popemobile' ride through Paris</span>
-          <span class="kr">교황, <b>AI</b> 경고와 파리 '포프모빌' 행진으로 프랑스 방문 시작</span>
-          <time>9월 25일</time></a></li>
-        <li><a href="https://www.france24.com/en/live-news/20260925-iran-proposes-plan-to-reopen-hormuz-within-seven-days-minister" target="_blank" rel="noopener">
-          <span class="headline"><b>Iran</b> proposes plan to reopen Hormuz within seven days: minister</span>
-          <span class="kr"><b>이란</b> 외무장관 "7일 내 호르무즈 재개방 방안 제안"</span>
-          <time>9월 25일</time></a></li>
+        <li><a href="https://www.bbc.com/news/articles/cx272np7vgyo" target="_blank" rel="noopener">
+          <span class="headline"><b>Trump</b> says Canada wants 'benefits' of being US state after trade talks collapse</span>
+          <span class="kr"><b>트럼프</b>, 무역협상 결렬 후 "<b>캐나다</b>는 미국 주(州)가 되는 혜택 원한다"</span>
+          <time>8월 24일</time></a></li>
+        <li><a href="https://www.bbc.com/news/articles/c4g3g36z7p6o" target="_blank" rel="noopener">
+          <span class="headline"><b>Guinea</b> rubbish landfill collapse kills 30</span>
+          <span class="kr"><b>기니</b> 쓰레기 매립장 붕괴로 30명 사망</span>
+          <time>8월 24일</time></a></li>
+        <li><a href="https://www.bbc.com/news/articles/cre4e1q3wewo" target="_blank" rel="noopener">
+          <span class="headline"><b>DR Congo</b> and M23 rebels agree roadmap for peace talks</span>
+          <span class="kr"><b>DR콩고</b>-M23 반군, 평화협상 로드맵 합의</span>
+          <time>8월 23일</time></a></li>
+        <li><a href="https://www.bbc.com/news/articles/c8enegx4xy3o" target="_blank" rel="noopener">
+          <span class="headline">Dozens of co-ordinated <b>arson attacks</b> hit southern Thailand</span>
+          <span class="kr">태국 남부서 조직적 <b>방화 공격</b> 수십 건 발생</span>
+          <time>8월 23일</time></a></li>
+        <li><a href="https://www.bbc.com/news/articles/cwy4ypzvd7po" target="_blank" rel="noopener">
+          <span class="headline"><b>Zelensky</b> should be asked what he knew about government corruption, sacked minister tells BBC</span>
+          <span class="kr"><b>젤렌스키</b>, 정부 부패 스캔들에 대해 뭘 알았는지 물어야 — 경질된 장관, BBC에 밝혀</span>
+          <time>8월 23일</time></a></li>
       </ul>
     </div>
 
@@ -421,21 +455,25 @@ footer b { color: #5b6478; }
         <span>Markets</span>
       </div>
       <ul>
+        <li><a href="https://www.cnbc.com/2026/09/27/debt-hungry-data-center-companies-increased-risk-bond-yields-spike.html" target="_blank" rel="noopener">
+          <span class="headline"><b>AI debt costs</b> rise as Treasury yields spike</span>
+          <span class="kr">국채금리 급등에 <b>AI 부채 비용</b> 상승</span>
+          <time>9월 27일</time></a></li>
         <li><a href="https://www.cnbc.com/2026/09/26/10-year-treasury-yield-is-at-its-highest-in-19-years-how-we-got-here.html" target="_blank" rel="noopener">
           <span class="headline">The <b>10-year Treasury yield</b> is at its highest in nearly two decades. How we got here</span>
-          <span class="kr"><b>美 10년물 국채금리</b> 약 20년 만의 최고치 — 어떻게 여기까지 왔나</span>
+          <span class="kr"><b>美 10년물 국채금리</b> 약 20년 만에 최고 — 어떻게 여기까지 왔나</span>
           <time>9월 26일</time></a></li>
-        <li><a href="https://www.cnbc.com/2026/09/25/treasury-yield-buy-bonds.html" target="_blank" rel="noopener">
-          <span class="headline">10-year Treasury yield hit a 19-year high — and some investors see opportunity to <b>buy bonds</b></span>
-          <span class="kr">10년물 금리 19년 만의 최고 — 일부 투자자는 <b>채권 매수</b> 기회로 판단</span>
+        <li><a href="https://www.cnbc.com/2026/09/26/meta-microsoft-led-tech-higher-this-week-despite-soaring-bond-yields.html" target="_blank" rel="noopener">
+          <span class="headline"><b>Meta and Microsoft</b> led tech stocks higher last week despite soaring bond yields</span>
+          <span class="kr">채권금리 급등에도 <b>메타·MS</b>가 지난주 기술주 상승 주도</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.cnbc.com/2026/09/25/5-things-to-know-before-the-stock-market-opens.html" target="_blank" rel="noopener">
+          <span class="headline"><b>5 things to know</b> before the stock market opens Friday</span>
+          <span class="kr">금요일 개장 전 알아야 할 <b>5가지</b></span>
           <time>9월 25일</time></a></li>
         <li><a href="https://www.cnbc.com/2026/09/24/stock-market-today-live-updates.html" target="_blank" rel="noopener">
           <span class="headline">Stock market news for <b>Sept. 25, 2026</b></span>
           <span class="kr">2026년 9월 25일 증시 소식</span>
-          <time>9월 24일</time></a></li>
-        <li><a href="https://www.cnbc.com/2026/09/24/us-treasury-yields-bonds-fed-inflation.html" target="_blank" rel="noopener">
-          <span class="headline"><b>30-year Treasury yield</b> hits highest level since 2004 as bond market rout continues</span>
-          <span class="kr">채권시장 급락 지속 — <b>30년물 국채금리</b> 2004년 이후 최고</span>
           <time>9월 24일</time></a></li>
       </ul>
     </div>
@@ -446,21 +484,25 @@ footer b { color: #5b6478; }
         <span>Markets</span>
       </div>
       <ul>
-        <li><a href="https://www.investing.com/news/stock-market-news/why-is-meta-platforms-stock-sliding-today-93CH-4917834" target="_blank" rel="noopener">
-          <span class="headline">Why is <b>Meta Platforms</b> stock sliding today?</span>
-          <span class="kr"><b>메타</b> 주가, 오늘 하락 — 이유는?</span>
-          <time>9월 25일</time></a></li>
-        <li><a href="https://www.investing.com/news/stock-market-news/qualcomm-and-akamai-among-market-cap-stock-movers-on-friday-93CH-4917745" target="_blank" rel="noopener">
-          <span class="headline"><b>Qualcomm</b> and <b>Akamai</b> among market cap stock movers on Friday</span>
-          <span class="kr">금요일 시총 상위 급등락 종목에 <b>퀄컴</b>·<b>아카마이</b></span>
+        <li><a href="https://www.investing.com/news/cryptocurrency-news/bitcoin-steadies-above-84000-as-historic-q3-rally-nears-its-end-4918823" target="_blank" rel="noopener">
+          <span class="headline"><b>Bitcoin</b> steadies above $84,000 as historic Q3 rally nears its end</span>
+          <span class="kr"><b>비트코인</b> 8만4천 달러 위 안정 — 역대급 3분기 랠리 마무리 국면</span>
+          <time>9월 27일</time></a></li>
+        <li><a href="https://www.investing.com/news/economy-news/iran-awaits-us-response-to-hormuz-peace-plan-as-trump-reportedly-rejects-deal-4918476" target="_blank" rel="noopener">
+          <span class="headline">Trump rejects Iran deal to reopen <b>Hormuz</b>; Houthi attacks on Saudi Arabia continue</span>
+          <span class="kr">트럼프, 이란의 <b>호르무즈</b> 재개방 제안 거부 — 후티의 사우디 공격 지속</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.investing.com/news/cryptocurrency-news/bitcoin-holds-near-84000-as-rising-bond-yields-offset-regulatory-progress-4918445" target="_blank" rel="noopener">
+          <span class="headline"><b>Bitcoin</b> holds near $84,000 as rising bond yields offset regulatory progress</span>
+          <span class="kr"><b>비트코인</b> 8만4천 달러 근처 — 금리 상승이 규제 진전 효과 상쇄</span>
+          <time>9월 26일</time></a></li>
+        <li><a href="https://www.investing.com/news/stock-market-news/why-is-dell-technologies-stock-rallying-today-93CH-4917727" target="_blank" rel="noopener">
+          <span class="headline">Why is <b>Dell Technologies</b> stock rallying today?</span>
+          <span class="kr"><b>델 테크놀로지스</b> 주가, 오늘 왜 오르나?</span>
           <time>9월 25일</time></a></li>
         <li><a href="https://www.investing.com/news/stock-market-news/why-is-bloom-energy-stock-rallying-today-93CH-4917710" target="_blank" rel="noopener">
           <span class="headline">Why is <b>Bloom Energy</b> stock rallying today?</span>
-          <span class="kr"><b>블룸에너지</b> 주가 랠리, 오늘 무슨 일이?</span>
-          <time>9월 25일</time></a></li>
-        <li><a href="https://www.investing.com/news/stock-market-news/why-is-microsoft-stock-rallying-today-93CH-4917693" target="_blank" rel="noopener">
-          <span class="headline">Why is <b>Microsoft</b> stock rallying today?</span>
-          <span class="kr"><b>마이크로소프트</b> 주가 강세 — 코파일럿 '슈퍼앱' 개편 효과</span>
+          <span class="kr"><b>블룸에너지</b> 주가, 오늘 왜 오르나?</span>
           <time>9월 25일</time></a></li>
       </ul>
     </div>
@@ -471,22 +513,22 @@ footer b { color: #5b6478; }
         <span>Markets</span>
       </div>
       <ul>
-        <li><a href="https://www.bloomberg.com/news/videos/2026-09-25/the-opening-trade-9-25-2026-video" target="_blank" rel="noopener">
-          <span class="headline">US, Iran Said to Be Exploring <b>Phased Deal</b> to Open Hormuz</span>
-          <span class="kr">美·이란, 호르무즈 개방 위한 <b>단계적 합의</b> 모색 중</span>
-          <time>9월 25일</time></a></li>
         <li><a href="https://www.bloomberg.com/news/articles/2026-09-24/stock-market-today-dow-s-p-live-updates" target="_blank" rel="noopener">
-          <span class="headline">Stock Market Today: Dow, S&amp;P Live Updates for <b>September 25</b></span>
-          <span class="kr"><b>9월 25일</b>자 뉴욕증시 라이브 — 유가 하락에 주식 반등</span>
+          <span class="headline"><b>Bond Selloff</b> Fades as Oil Cools, Lifting Stocks: Markets Wrap</span>
+          <span class="kr">유가 진정에 <b>채권 매도세</b> 완화, 증시 상승 — 마켓랩</span>
           <time>9월 24일</time></a></li>
-        <li><a href="https://www.bloomberg.com/news/articles/2026-09-24/latest-oil-market-news-and-analysis-for-date" target="_blank" rel="noopener">
-          <span class="headline"><b>Oil</b> Steadies With the US, Iran Said to Be Exploring Phased Deal</span>
-          <span class="kr">美·이란 단계적 합의 모색 소식에 <b>유가</b> 안정</span>
-          <time>9월 24일</time></a></li>
-        <li><a href="https://www.bloomberg.com/news/articles/2026-09-23/latest-oil-market-news-and-analysis-for-sept-24" target="_blank" rel="noopener">
-          <span class="headline"><b>Oil</b> Extends Advance on Renewed Tensions Between the US and Iran</span>
-          <span class="kr">美·이란 긴장 재고조에 <b>유가</b> 상승 지속</span>
+        <li><a href="https://www.bloomberg.com/news/articles/2026-09-23/stock-market-today-dow-s-p-live-updates" target="_blank" rel="noopener">
+          <span class="headline">Stock Market Today: Dow, S&amp;P Live Updates for <b>September 24</b></span>
+          <span class="kr">9월 24일자 뉴욕증시 라이브 업데이트 — 다우·S&amp;P 동향</span>
           <time>9월 23일</time></a></li>
+        <li><a href="https://www.bloomberg.com/news/videos/2026-09-21/stocks-bonds-climb-as-oil-falls-on-us-iran-hopes-video" target="_blank" rel="noopener">
+          <span class="headline">Stocks, Bonds Climb as <b>Oil Falls</b> on US-Iran Hopes</span>
+          <span class="kr">美-이란 협상 기대에 <b>유가 하락</b>, 주식·채권 동반 상승</span>
+          <time>9월 21일</time></a></li>
+        <li><a href="https://www.bloomberg.com/news/articles/2026-09-17/us-stocks-primed-to-rebound-from-fed-day-slump-as-futures-rally" target="_blank" rel="noopener">
+          <span class="headline">US Stocks Primed to Rebound From <b>Fed Day</b> Slump as Futures Rally</span>
+          <span class="kr">선물 강세에 美증시, <b>FOMC 당일</b> 급락서 반등 채비</span>
+          <time>9월 17일</time></a></li>
       </ul>
     </div>
 
@@ -501,21 +543,21 @@ footer b { color: #5b6478; }
         <span>United Nations</span>
       </div>
       <ul>
-        <li><a href="https://news.un.org/en/story/2026/09/1168455" target="_blank" rel="noopener">
-          <span class="headline">Countries adopt global blueprint to tackle fast-evolving <b>crime</b> in digital age</span>
-          <span class="kr">각국, 디지털 시대 급변하는 <b>범죄</b> 대응 위한 글로벌 청사진 채택</span>
+        <li><a href="https://news.un.org/en/story/2026/09/1168462" target="_blank" rel="noopener">
+          <span class="headline">The Takeaway: UN <b>General Assembly</b> debate Day 5</span>
+          <span class="kr">UN <b>총회</b> 일반토의 5일차 핵심 정리 — AI·이주 쟁점 부각</span>
           <time>9월 26일</time></a></li>
         <li><a href="https://news.un.org/en/story/2026/09/1168436" target="_blank" rel="noopener">
           <span class="headline"><b>Yemen</b> violence deepens concerns over child hunger crisis</span>
           <span class="kr"><b>예멘</b> 폭력 사태로 아동 기아 위기 우려 심화</span>
-          <time>9월 24일</time></a></li>
-        <li><a href="https://news.un.org/en/story/2026/09/1168421" target="_blank" rel="noopener">
-          <span class="headline">The Takeaway: <b>UN General Assembly</b> debate Day 2</span>
-          <span class="kr"><b>유엔총회</b> 일반토의 2일차 핵심 정리</span>
-          <time>9월 24일</time></a></li>
+          <time>9월 25일</time></a></li>
+        <li><a href="https://news.un.org/en/story/2026/09/1168414" target="_blank" rel="noopener">
+          <span class="headline">OpenAI and Anthropic brief <b>Security Council</b> amid 'real and imminent' threat posed by runaway AI</span>
+          <span class="kr">OpenAI·Anthropic, 통제 불능 AI 위협 관련 <b>안보리</b> 브리핑</span>
+          <time>9월 23일</time></a></li>
         <li><a href="https://news.un.org/en/story/2026/09/1168390" target="_blank" rel="noopener">
           <span class="headline"><b>Displacement</b> on the rise in Yemen as fighting continues</span>
-          <span class="kr">교전 지속 속 예멘 <b>피란민</b> 급증</span>
+          <span class="kr">교전 지속되며 예멘 <b>피란민</b> 급증</span>
           <time>9월 22일</time></a></li>
       </ul>
     </div>
@@ -531,80 +573,13 @@ footer b { color: #5b6478; }
           <span class="kr">세계 정상들, 미래 <b>팬데믹</b> 대비 공약 재확인</span>
           <time>9월 25일</time></a></li>
         <li><a href="https://www.who.int/news/item/18-09-2026-member-states-advance-negotiations-on-pathogen-access-and-benefit-sharing-ahead-of-un-general-assembly-meeting-on-pandemics" target="_blank" rel="noopener">
-          <span class="headline">Member States advance negotiations on <b>pathogen access and benefit-sharing</b> ahead of UNGA pandemic meeting</span>
-          <span class="kr">회원국들, 유엔총회 팬데믹 회의 앞두고 <b>병원체 접근·이익공유</b> 협상 진전</span>
+          <span class="headline">Member States advance negotiations on <b>pathogen access and benefit-sharing</b></span>
+          <span class="kr">회원국들, <b>병원체 접근·이익공유(PABS)</b> 협상 진전</span>
           <time>9월 18일</time></a></li>
-        <li><a href="https://www.who.int/news-room/events/detail/2026/09/18/default-calendar/who-at-the-united-nations-general-assembly-2026" target="_blank" rel="noopener">
-          <span class="headline">WHO at the <b>United Nations General Assembly</b> 2026</span>
-          <span class="kr">2026 <b>유엔총회</b>에서의 WHO 활동</span>
-          <time>9월 18일</time></a></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-head">
-        <h2><span class="badge badge-wb">WB</span> World Bank</h2>
-        <span>Reports</span>
-      </div>
-      <ul>
-        <li><a href="https://www.worldbank.org/en/news/press-release/2026/09/24/world-bank-group-to-support-serbia-s-sustainable-gas-sector-and-energy-security" target="_blank" rel="noopener">
-          <span class="headline">World Bank Group to Support <b>Serbia</b>'s Sustainable Gas Sector Development and Energy Security</span>
-          <span class="kr">세계은행, <b>세르비아</b> 가스부문 개발·에너지안보에 6억 달러 지원</span>
-          <time>9월 24일</time></a></li>
-        <li><a href="https://www.worldbank.org/en/news/press-release/2026/09/17/world-bank-group-mobilizes-record-private-capital-for-developing-countries-driving" target="_blank" rel="noopener">
-          <span class="headline">World Bank Group Mobilizes <b>Record Private Capital</b> for Developing Countries</span>
-          <span class="kr">세계은행그룹, 개도국 위한 <b>민간자본</b> 사상 최대 유치</span>
-          <time>9월 17일</time></a></li>
-        <li><a href="https://www.worldbank.org/en/news/press-release/2026/09/16/michael-kremer-appointed-as-world-bank-group-chief-economist" target="_blank" rel="noopener">
-          <span class="headline"><b>Michael Kremer</b> Appointed as World Bank Group Chief Economist</span>
-          <span class="kr">노벨상 수상자 <b>마이클 크레머</b>, 세계은행 수석이코노미스트 임명</span>
-          <time>9월 16일</time></a></li>
-        <li><a href="https://www.worldbank.org/en/news/press-release/2026/09/14/world-bank-group-report-identifies-significant-private-investment-potential-for-dj" target="_blank" rel="noopener">
-          <span class="headline">Report Identifies Significant Private Investment Potential for <b>Djibouti</b></span>
-          <span class="kr">세계은행 보고서 "<b>지부티</b>, 민간투자 잠재력 상당"</span>
-          <time>9월 14일</time></a></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-head">
-        <h2><span class="badge badge-undp">UNDP</span> UNDP</h2>
-        <span>Development</span>
-      </div>
-      <ul>
-        <li><a href="https://www.undp.org/news/italy-undp-and-uncdf-advance-strategic-partnership-rome" target="_blank" rel="noopener">
-          <span class="headline"><b>Italy</b>, UNDP and UNCDF advance strategic partnership</span>
-          <span class="kr"><b>이탈리아</b>·UNDP·UNCDF, 전략적 파트너십 강화</span>
-          <time>9월 23일</time></a></li>
-        <li><a href="https://www.undp.org/press-releases/middle-east-conflict-fallout-pushes-countries-toward-us1-trillion-fossil-fuel-subsidy-bill-warns-un-development-programme" target="_blank" rel="noopener">
-          <span class="headline">Middle East conflict fallout pushes countries toward US$1 trillion <b>fossil fuel subsidy</b> bill</span>
-          <span class="kr">UNDP "중동 분쟁 여파로 각국 <b>화석연료 보조금</b> 1조 달러 육박"</span>
+        <li><a href="https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON618" target="_blank" rel="noopener">
+          <span class="headline"><b>Ebola</b> disease caused by Bundibugyo virus — Democratic Republic of the Congo</span>
+          <span class="kr">DR콩고 분디부교 바이러스 <b>에볼라</b> 발병 현황</span>
           <time>2026년 9월</time></a></li>
-        <li><a href="https://www.undp.org/press-releases/un-development-programme-relocate-substantial-share-new-york-based-posts" target="_blank" rel="noopener">
-          <span class="headline">UN Development Programme to <b>relocate</b> a substantial share of New York-based posts</span>
-          <span class="kr">UNDP, 뉴욕 소재 직위 상당수 지역사무소로 <b>이전</b></span>
-          <time>2026년 8월</time></a></li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="card-head">
-        <h2><span class="badge badge-oecd">OECD</span> OECD</h2>
-        <span>Reports</span>
-      </div>
-      <ul>
-        <li><a href="https://www.oecd.org/en/about/news/press-releases/2026/09/global-growth-holds-up-despite-successive-shocks-but-risks-persist.html" target="_blank" rel="noopener">
-          <span class="headline"><b>Global growth</b> holds up despite successive shocks, but risks persist</span>
-          <span class="kr">OECD 중간 경제전망 "<b>세계 성장</b>, 잇단 충격에도 견조 — 위험은 여전"</span>
-          <time>9월 23일</time></a></li>
-        <li><a href="https://www.oecd.org/en/about/news/media-advisories/2026/09/oecd-to-launch-education-at-a-glance-2026-on-29-september.html" target="_blank" rel="noopener">
-          <span class="headline">OECD to launch <b>Education at a Glance 2026</b> on 29 September</span>
-          <span class="kr">OECD, 9월 29일 <b>'한눈에 보는 교육 2026'</b> 발표 예정</span>
-          <time>2026년 9월</time></a></li>
-        <li><a href="https://www.oecd.org/en/data/insights/statistical-releases/2026/09/consumer-prices-oecd-updated-8-september-2026.html" target="_blank" rel="noopener">
-          <span class="headline"><b>Consumer Prices</b>, OECD — Updated: 8 September 2026</span>
-          <span class="kr">OECD <b>소비자물가</b> 통계 (9월 8일 갱신)</span>
-          <time>9월 8일</time></a></li>
       </ul>
     </div>
 
@@ -614,18 +589,89 @@ footer b { color: #5b6478; }
         <span>Reports</span>
       </div>
       <ul>
+        <li><a href="https://www.imf.org/en/news/articles/2026/09/23/pr26301-sri-lanka-imf-staff-team-concludes-visit" target="_blank" rel="noopener">
+          <span class="headline">IMF Staff Team Concludes Visit to <b>Sri Lanka</b></span>
+          <span class="kr">IMF 실무진, <b>스리랑카</b> 방문 마무리</span>
+          <time>9월 23일</time></a></li>
         <li><a href="https://www.imf.org/en/news/articles/2026/09/21/pr26296-lics-imf-executive-board-reviews-the-joint-world-bank-debt-sustainability-framework" target="_blank" rel="noopener">
-          <span class="headline">IMF Board Reviews Joint IMF-World Bank <b>Debt Sustainability Framework</b> for Low-Income Countries</span>
-          <span class="kr">IMF 이사회, 저소득국 대상 IMF·세계은행 공동 <b>부채지속가능성 체계</b> 검토</span>
+          <span class="headline">IMF Board Reviews the Joint IMF-World Bank <b>Debt Sustainability Framework</b> for Low Income Countries</span>
+          <span class="kr">IMF 이사회, 저소득국 <b>부채지속가능성 체계</b> 검토</span>
           <time>9월 21일</time></a></li>
         <li><a href="https://www.imf.org/en/news/articles/2026/09/21/pr26290-algeria-imf-concludes-2026-aiv-consultation" target="_blank" rel="noopener">
           <span class="headline">IMF Executive Board Concludes 2026 Article IV Consultation with <b>Algeria</b></span>
-          <span class="kr">IMF, <b>알제리</b>와 2026년 연례협의 종료</span>
+          <span class="kr">IMF 이사회, <b>알제리</b> 2026년 연례협의 종료</span>
           <time>9월 21일</time></a></li>
-        <li><a href="https://www.imf.org/en/news/articles/2026/09/01/pr26283-estonia-imf-concludes-2026-aiv-consultation" target="_blank" rel="noopener">
-          <span class="headline">IMF Executive Board Concludes 2026 Article IV Consultation with <b>Estonia</b></span>
-          <span class="kr">IMF, <b>에스토니아</b>와 2026년 연례협의 종료</span>
+        <li><a href="https://www.imf.org/en/news/articles/2026/09/01/pr26282-senegal-imf-reaches-sla-ecf-arrangement" target="_blank" rel="noopener">
+          <span class="headline">IMF Reaches Staff-Level Agreement on an ECF Arrangement with <b>Senegal</b></span>
+          <span class="kr">IMF-<b>세네갈</b>, 확대신용제도(ECF) 실무진 합의</span>
           <time>9월 1일</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-oecd">OECD</span> OECD</h2>
+        <span>Reports</span>
+      </div>
+      <ul>
+        <li><a href="https://www.oecd.org/en/publications/oecd-economic-outlook-interim-report-september-2026_f751d02b-en.html" target="_blank" rel="noopener">
+          <span class="headline">OECD <b>Economic Outlook</b>, Interim Report September 2026</span>
+          <span class="kr">OECD 9월 <b>중간 경제전망</b> — 올해 세계 성장률 2.9%</span>
+          <time>9월 23일</time></a></li>
+        <li><a href="https://www.oecd.org/en/data/insights/statistical-releases/2026/09/consumer-prices-oecd-updated-8-september-2026.html" target="_blank" rel="noopener">
+          <span class="headline"><b>Consumer Prices</b>, OECD — Updated: 8 September 2026</span>
+          <span class="kr">OECD <b>소비자물가</b> 통계 (9월 8일 갱신)</span>
+          <time>9월 8일</time></a></li>
+        <li><a href="https://www.oecd.org/en/about/news/media-advisories/2026/09/oecd-to-launch-education-at-a-glance-2026-on-29-september.html" target="_blank" rel="noopener">
+          <span class="headline">OECD to launch <b>Education at a Glance 2026</b> on 29 September</span>
+          <span class="kr">OECD, 9월 29일 <b>'한눈에 보는 교육 2026'</b> 발표 예정</span>
+          <time>2026년 9월</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-undp">UNDP</span> UNDP</h2>
+        <span>Development</span>
+      </div>
+      <ul>
+        <li><a href="https://www.undp.org/european-union/press-releases/more-160-million-people-risk-being-trapped-between-crisis-and-recovery-un-development-programme-warns" target="_blank" rel="noopener">
+          <span class="headline">More than <b>160 million people</b> risk being trapped between crisis and recovery, UNDP warns</span>
+          <span class="kr">UNDP "<b>1억6천만 명</b>, 위기와 회복 사이에 갇힐 위험"</span>
+          <time>9월 23일</time></a></li>
+        <li><a href="https://www.undp.org/news/italy-undp-and-uncdf-advance-strategic-partnership-rome" target="_blank" rel="noopener">
+          <span class="headline"><b>Italy</b>, UNDP and UNCDF advance strategic partnership in Rome</span>
+          <span class="kr"><b>이탈리아</b>-UNDP-UNCDF, 로마 거점 전략적 협력 강화</span>
+          <time>9월 23일</time></a></li>
+        <li><a href="https://www.undp.org/ukraine/press-releases/ukraine-presents-art-project-switzerland-impact-demining-lives-ukrainians-and-global-food-security" target="_blank" rel="noopener">
+          <span class="headline">Ukraine presents art project on impact of <b>demining</b> on lives of Ukrainians and global food security</span>
+          <span class="kr">우크라이나, <b>지뢰 제거</b>가 삶과 식량안보에 미친 영향 담은 예술 프로젝트 공개</span>
+          <time>2026년 9월</time></a></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2><span class="badge badge-wb">WB</span> World Bank</h2>
+        <span>Reports</span>
+      </div>
+      <ul>
+        <li><a href="https://www.worldbank.org/en/news/press-release/2026/09/17/world-bank-group-mobilizes-record-private-capital-for-developing-countries-driving" target="_blank" rel="noopener">
+          <span class="headline">World Bank Group Mobilizes <b>Record Private Capital</b> for Developing Countries</span>
+          <span class="kr">세계은행, 개도국 위한 <b>민간자본</b> 사상 최대 동원</span>
+          <time>9월 17일</time></a></li>
+        <li><a href="https://www.worldbank.org/en/news/press-release/2026/09/16/michael-kremer-appointed-as-world-bank-group-chief-economist" target="_blank" rel="noopener">
+          <span class="headline"><b>Michael Kremer</b> Appointed as World Bank Group Chief Economist</span>
+          <span class="kr">노벨상 수상자 <b>마이클 크레머</b>, 세계은행 수석이코노미스트 임명</span>
+          <time>9월 16일</time></a></li>
+        <li><a href="https://www.worldbank.org/en/news/press-release/2026/09/14/world-bank-group-report-identifies-significant-private-investment-potential-for-dj" target="_blank" rel="noopener">
+          <span class="headline">Report Identifies Significant Private Investment Potential for <b>Djibouti</b></span>
+          <span class="kr">세계은행 보고서 "<b>지부티</b>, 민간투자 잠재력 상당"</span>
+          <time>9월 14일</time></a></li>
+        <li><a href="https://www.worldbank.org/en/news/press-release/2026/09/10/world-bank-group-launches-initiative-to-help-local-financial-institutions-expand-d" target="_blank" rel="noopener">
+          <span class="headline">Initiative to Help Local Financial Institutions Expand <b>Digital Payments</b> in Emerging Markets</span>
+          <span class="kr">세계은행그룹, 신흥국 금융기관 <b>디지털 결제</b> 확대 지원 착수</span>
+          <time>9월 10일</time></a></li>
       </ul>
     </div>
 
